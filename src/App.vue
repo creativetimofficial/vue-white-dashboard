@@ -1,8 +1,7 @@
 <template class="white-content">
   <div id="app">
-    <div id="nav">
-      <router-link to="/dashboard" class="mx-4">Dashboard</router-link>
-      
+    <div>
+      <router-view></router-view>
     </div>
   </div>
 </template>

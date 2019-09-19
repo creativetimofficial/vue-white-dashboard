@@ -1,41 +1,43 @@
 <template>
-  <div class="wrapper" :class="{'nav-open': $sidebar.showSidebar}">
+  <div class="wrapper">
+    <!-- <div class="wrapper" :class="{'nav-open': $sidebar.showSidebar}"> -->
+
     <side-bar>
-      <mobile-menu slot="content"></mobile-menu>
+      <!-- <mobile-menu slot="content"></mobile-menu> -->
       <sidebar-link to="/dashboard">
-        <icon></icon>
+        <i class="tim-icons icon-chart-pie-36"></i>
         <p>Dashboard</p>
       </sidebar-link>
       <sidebar-link to="/icons">
-        <icon></icon>
+        <i class="tim-icons icon-atom"></i>
         <p>Icons</p>
       </sidebar-link>
       <sidebar-link to="/maps">
-        <icon></icon>
+        <i class="tim-icons icon-pin"></i>
         <p>Maps</p>
       </sidebar-link>
       <sidebar-link to="/notifications">
-        <icon></icon>
+        <i class="tim-icons icon-bell-55"></i>
         <p>Notifications</p>
       </sidebar-link>
       <sidebar-link to="/user">
-        <icon></icon>
+        <i class="tim-icons icon-single-02"></i>
         <p>User Profile</p>
       </sidebar-link>
       <sidebar-link to="/table">
-        <icon></icon>
+        <i class="tim-icons icon-puzzle-10"></i>
         <p>Table list</p>
       </sidebar-link>
       <sidebar-link to="/typography">
-        <icon></icon>
+        <i class="tim-icons icon-align-center"></i>
         <p>Typography</p>
       </sidebar-link>
       <sidebar-link to="/rtl">
-        <icon></icon>
+        <i class="tim-icons icon-world"></i>
         <p>Rtl</p>
       </sidebar-link>
       <sidebar-link to="/upgrade">
-        <icon></icon>
+        <i class="tim-icons icon-spaceship"></i>
         <p>Upgrade to PRO</p>
       </sidebar-link>
     </side-bar>
@@ -57,13 +59,19 @@ import TopNavbar from "./TopNavbar.vue";
 import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./DashboardContent.vue";
 import MobileMenu from "./MobileMenu.vue";
+import SideBar from "@/components/SidebarPlugin/SideBar.vue";
+import SidebarLink from "@/components/SidebarPlugin/SidebarLink.vue";
+
+
 
 export default{
   components: {
     TopNavbar,
     DashboardContent,
     ContentFooter,
-    MobileMenu
+    MobileMenu,
+    SideBar,
+    SidebarLink
   }
 };
 </script>

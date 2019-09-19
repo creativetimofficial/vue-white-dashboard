@@ -1,0 +1,49 @@
+<template>
+  <div
+      class="sidebar"
+      :data-color="activeColor">
+      <div class="sidebar-wrapper text-left">
+        <div class="logo">
+          <a href="javascript:void(0)" class="simple-text logo-mini">
+            {{ abv }}
+          </a>
+
+          <a href="javascript:void(0)" class="simple-text logo-normal text-left">
+            {{ title }}
+          </a>
+        </div>
+        <ul class="nav">
+          <slot>
+            <sidebar-link>
+            </sidebar-link>
+          </slot>
+        </ul>
+      </div>
+  </div>
+</template>
+<script>
+import SidebarLink from "./SidebarLink.vue";
+
+export default{
+  name: "side-bar",
+  components: {
+    SidebarLink
+  },
+  props: {
+    abv: {
+      type: String,
+      default: "CT"
+    },
+    title: {
+      type: String,
+      default: "Creative Tim"
+    },
+    activeColor: {
+      type: String,
+      default: "green"
+    }
+  }
+}
+</script>
+<style>
+</style>
