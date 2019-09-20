@@ -1,7 +1,7 @@
 <template>
   <div
       class="sidebar"
-      :data-color="activeColor">
+      :data="activeColor">
       <div class="sidebar-wrapper text-left">
         <div class="logo">
           <a href="javascript:void(0)" class="simple-text logo-mini">

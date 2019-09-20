@@ -23,8 +23,8 @@
               <span class="d-lg-none d-md-block">Search</span>
             </button>
           </li>
-          <li class="dropdown nav-item">
-            <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
+          <drop-down>
+            <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle nav-link">
               <div class="notification d-none d-lg-block d-xl-block"></div>
               <i class="tim-icons icon-sound-wave"></i>
               <p class="d-lg-none">
@@ -38,11 +38,11 @@
               <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another notification</a></li>
               <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a></li>
             </ul>
-          </li>
-          <li class="dropdown nav-item">
+          </drop-down>
+          <drop-down>
                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                   <div class="photo">
-                    <!-- <img src="../assets/img/anime3.png" alt="Profile Photo"> -->
+                    <img src="@/assets/img/anime3.png" alt="Profile Photo">
                   </div>
                   <b class="caret d-none d-lg-block d-xl-block"></b>
                   <p class="d-lg-none">
@@ -55,13 +55,21 @@
                   <li class="dropdown-divider"></li>
                   <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a></li>
                 </ul>
-              </li>
+              </drop-down>
         </ul>
       </div>
     </div>
   </nav>
 </template>
 <script>
+
+import DropDown from "@/components/Dropdown.vue";
+
+  export default{
+    components:{
+      DropDown
+    }
+  }
 </script>
 <style>
 </style>
