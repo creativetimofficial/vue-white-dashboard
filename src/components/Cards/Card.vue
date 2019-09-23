@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <div class="card-header" v-if="$slots.header || title">
+    <div class="card-header text-left" v-if="$slots.header || title">
       <slot name="header">
         <h5 class="card-category" v-if="subTitle">{{subTitle}}</h5>
         <h2 class="card-title">{{ title }}</h2>

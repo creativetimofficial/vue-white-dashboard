@@ -2,7 +2,9 @@
   <li
       class="dropdown nav-item"
       :class="{show: isOpen}"
-      @click="toggleDropDown">
+      @click="toggleDropDown"
+      v-click-outside="closeDropDown"
+      >
       <slot></slot>
 
   </li>

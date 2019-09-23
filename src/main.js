@@ -4,6 +4,8 @@ import App from "./App.vue";
 import '@/assets/scss/black-dashboard.scss';
 import '@/assets/css/nucleo-icons.css';
 
+import GlobalComponents from "./globalComponents";
+import GlobalDirectives from "./globalDirectives";
 
 Vue.config.productionTip = false;
 
@@ -16,6 +18,9 @@ const router = new VueRouter({
 });
 
 Vue.use(VueRouter);
+
+Vue.use(GlobalComponents);
+Vue.use(GlobalDirectives);
 
 new Vue({
   router,
