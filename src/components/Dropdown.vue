@@ -1,5 +1,6 @@
 <template>
-  <li
+  <component
+      :is="tag"
       class="dropdown nav-item"
       :class="{show: isOpen}"
       @click="toggleDropDown"
@@ -7,7 +8,7 @@
       >
       <slot></slot>
 
-  </li>
+  </component>
 
 </template>
 <script>
@@ -16,6 +17,12 @@
 
   export default {
     name: "drop-down",
+    props:{
+      tag:{
+        type: String,
+        default: "li"
+      }
+    },
     data(){
       return{
         isOpen: false

@@ -1,9 +1,10 @@
-import ChartCard from "./Cards/ChartCard.vue";
+import Card from "./Cards/Card.vue";
+
 
 let components = {
-  ChartCard
+  Card
 };
 
 export{
-  ChartCard
+  Card
 }
