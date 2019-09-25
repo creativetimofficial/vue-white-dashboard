@@ -16,7 +16,7 @@
 </template>
 <script>
   export default {
-    name: "base-checkbox",
+    name: 'base-checkbox',
     model:{
       prop: "checked"
     },
@@ -24,6 +24,12 @@
       disabled: Boolean,
       inline: Boolean,
       checked: [Array, Boolean]
+    },
+    data(){
+      return {
+        cbId: '',
+        touched: false
+      }
     },
     computed:{
       model:{
@@ -42,6 +48,9 @@
           return `form-check-inline`
         }
       }
+    },
+    created(){
+      this.cbId = Math.random().toString(16).slice(2)
     }
   }
 </script>

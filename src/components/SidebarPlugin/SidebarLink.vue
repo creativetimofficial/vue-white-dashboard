@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="nav-item">
     <router-link v-bind="$attrs">
       <slot>
         <i></i>
@@ -30,6 +30,11 @@
       tag: {
         type: String,
         default: "router-link"
+      }
+    },
+    methods:{
+      isActive(){
+        return this.$el.classList.contains("active");
       }
     }
   }

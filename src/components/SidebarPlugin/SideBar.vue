@@ -14,7 +14,7 @@
         </div>
         <ul class="nav">
           <slot>
-            <sidebar-link>
+            <sidebar-link >
             </sidebar-link>
           </slot>
         </ul>
@@ -41,6 +41,24 @@ export default{
     activeColor: {
       type: String,
       default: "green"
+    },
+    sidebarLinks:{
+      type: Array,
+      default: () => []
+    }
+  },
+  data(){
+    return{
+      activeLinkIndex: 0
+    }
+  },
+  methods:{
+    findActiveLink(){
+      this.links.forEach((link, index) => {
+        if(link.isActive()){
+          this.activeLinkIndex = index;
+        }
+      });
     }
   }
 }

@@ -82,7 +82,7 @@
         <card
         type="chart"
         cardCol
-        icon="icon-send text-success"
+        icon="icon-send text-primary"
         title="12,100k"
         subTitle="Completed Tasks"
         >
@@ -113,9 +113,18 @@
               </ul>
             </drop-down>
           </template>
+          <div class="table-full-width table-responsive">
+            <task-list></task-list>
+          </div>
         </card>
       </div>
       <div class="col-lg-6 col-md-12">
+        <card class="card">
+          <h4 slot="header" class="card-title">Simple Table</h4>
+          <div class="table-responsive">
+            <user-table></user-table>
+          </div>
+        </card>
       </div>
     </div>
   </div>
@@ -129,14 +138,17 @@ import {
 import LineChart from '@/components/Charts/LineChart';
 import BarChart from '@/components/Charts/BarChart';
 import * as chartConfigs from '@/components/Charts/config';
+import TaskList from './Dashboard/TaskList'
+import UserTable from './Dashboard/UserTable'
 import config from '@/config';
-
 
 export default {
   components: {
     Card,
     LineChart,
-    BarChart
+    BarChart,
+    TaskList,
+    UserTable
   },
   data(){
     return{
