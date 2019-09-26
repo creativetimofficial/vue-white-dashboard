@@ -6,6 +6,8 @@ import '@/assets/css/nucleo-icons.css';
 
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
+import Notify from "@/components/NotificationPlugin";
+
 
 Vue.config.productionTip = false;
 
@@ -21,6 +23,7 @@ Vue.use(VueRouter);
 
 Vue.use(GlobalComponents);
 Vue.use(GlobalDirectives);
+Vue.use(Notify);
 
 new Vue({
   router,
