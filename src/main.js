@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import App from "./App.vue";
 import '@/assets/scss/black-dashboard.scss';
 import '@/assets/css/nucleo-icons.css';
+import "@/assets/demo/demo.css";
+
 
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
