@@ -34,11 +34,7 @@
       </sidebar-link>
       <sidebar-link to="/rtl">
         <i class="tim-icons icon-world"></i>
-        <p>Rtl</p>
-      </sidebar-link>
-      <sidebar-link to="/upgrade">
-        <i class="tim-icons icon-spaceship"></i>
-        <p>Upgrade to PRO</p>
+        <p>Rtl Support</p>
       </sidebar-link>
     </side-bar>
 

@@ -1,12 +1,12 @@
 <template>
-  <li class="nav-item">
-    <router-link v-bind="$attrs">
-      <slot>
-        <i></i>
-        <p>{{ link.name }}</p>
-      </slot>
-    </router-link>
-  </li>
+    <component :is="tag" v-bind="$attrs" class="nav-item" tag="li">
+      <a class="nav-link">
+        <slot>
+          <i></i>
+          <p>{{ link.name }}</p>
+        </slot>
+      </a>
+    </component :is="tag">
 </template>
 <script>
   export default{

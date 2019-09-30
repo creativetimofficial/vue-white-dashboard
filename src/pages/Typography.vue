@@ -100,14 +100,6 @@
               <small>Use "small" tag for the headers</small>
             </h2>
           </div>
-          <div class="typography-line">
-            <h2>
-              <span>Small Tag</span>
-              Header with small subtitle
-              <br>
-              <small>Use "small" tag for the headers</small>
-            </h2>
-          </div>
           <div class="typography-line text-left">
             <span>Lists</span>
             <div class="row">

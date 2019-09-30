@@ -19,6 +19,7 @@ import routes from "./router";
 // configure router
 const router = new VueRouter({
   routes, // short for routes: routes
+  linkExactActiveClass: "active"
 });
 
 Vue.use(VueRouter);

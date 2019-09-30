@@ -14,7 +14,8 @@
     "vue-chartjs": "^3.4.2",
     "vue-click-outside": "^1.0.7",
     "vue-clickaway": "^2.2.2",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vue2-transitions": "^0.3.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",

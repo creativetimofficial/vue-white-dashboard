@@ -18,11 +18,18 @@
       </button>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="search-bar input-group">
+          <li class="search-bar input-group"  @click="searchModalVisible = true">
             <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
               <span class="d-lg-none d-md-block">Search</span>
             </button>
           </li>
+          <modal :show.sync="searchModalVisible"
+                 class="modal-search"
+                 id="searchModal"
+                 :centered="false"
+                 :show-close="true">
+            <input slot="header" v-model="searchQuery" type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+          </modal>
           <drop-down>
             <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle nav-link">
               <div class="notification d-none d-lg-block d-xl-block"></div>
@@ -64,10 +71,19 @@
 <script>
 
 import DropDown from "@/components/Dropdown.vue";
+import Modal from "@/components/Modal.vue";
+
 
   export default{
     components:{
-      DropDown
+      DropDown,
+      Modal
+    },
+    data() {
+      return {
+        searchModalVisible: false,
+        searchQuery: ''
+      };
     }
   }
 </script>
