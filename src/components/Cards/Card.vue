@@ -1,6 +1,6 @@
 <template>
   <div class="card" :class="[type && `card-${type}`]">
-    <div class="card-header text-left" v-if="$slots.header || title">
+    <div class="card-header" :class="isRTL ? 'text-right' : 'text-left'" v-if="$slots.header || title">
       <slot name="header">
         <h5 class="card-category" v-if="subTitle">{{subTitle}}</h5>
         <h2 class="card-title"><i v-if="icon" class="tim-icons" :class="icon"></i>{{ title }}</h2>
@@ -22,6 +22,11 @@ export default{
     subTitle: String,
     type: String,
     icon: String
+  },
+  computed:{
+    isRTL() {
+      return this.$rtl.isRTL;
+    }
   }
 }
 </script>

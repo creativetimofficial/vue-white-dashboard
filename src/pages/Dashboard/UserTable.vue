@@ -1,7 +1,7 @@
 <template>
   <base-table
-              :data="data"
-              :columns="columns"
+              :data="isRTL ? data : data"
+              :columns="isRTL ? columnsAr : columns"
               table-class="text-left"
               thead-classes="text-primary text-left">
   </base-table>
@@ -68,12 +68,24 @@
            city: "Gloucester"
          }
        ],
+
        columns:[
          "name",
          "country",
          "city",
          "salary"
+       ],
+       columnsAr:[
+         "اسم",
+         "بلد",
+         "مدينة",
+         "راتب"
        ]
+     }
+   },
+   computed: {
+     isRTL() {
+       return this.$rtl.isRTL;
      }
    }
  }

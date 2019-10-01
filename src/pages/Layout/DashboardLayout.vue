@@ -32,7 +32,7 @@
         <i class="tim-icons icon-align-center"></i>
         <p>Typography</p>
       </sidebar-link>
-      <sidebar-link to="/rtl">
+      <sidebar-link to="/dashboard?enableRTL=true">
         <i class="tim-icons icon-world"></i>
         <p>Rtl Support</p>
       </sidebar-link>
@@ -68,6 +68,11 @@ export default{
     MobileMenu,
     SideBar,
     SidebarLink
+  },
+  comouted: {
+    isRTL() {
+      return this.$rtl.isRTL;
+    }
   }
 };
 </script>

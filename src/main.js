@@ -8,6 +8,7 @@ import "@/assets/demo/demo.css";
 
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
+import RTLPlugin from "./RTLPlugin";
 import Notify from "@/components/NotificationPlugin";
 
 
@@ -26,6 +27,7 @@ Vue.use(VueRouter);
 
 Vue.use(GlobalComponents);
 Vue.use(GlobalDirectives);
+Vue.use(RTLPlugin);
 Vue.use(Notify);
 
 new Vue({
