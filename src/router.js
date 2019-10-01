@@ -7,7 +7,6 @@ import Notifications from "@/pages/Notifications.vue";
 import UserProfile from "@/pages/UserProfile.vue";
 import TableList from "@/pages/TableList.vue";
 import Typography from "@/pages/Typography.vue";
-import RtlSupport from "@/pages/RtlSupport.vue";
 import UpgradeToPRO from "@/pages/UpgradeToPRO.vue";
 
 
@@ -50,16 +49,6 @@ const routes = [{
       path: "typography",
       name: "Typography",
       component: Typography
-    },
-    {
-      path: "rtl",
-      name: "Rtl Support",
-      component: RtlSupport
-    },
-    {
-      path: "upgrade",
-      name: "Upgrade to PRO",
-      component: UpgradeToPRO
     }
   ]
 

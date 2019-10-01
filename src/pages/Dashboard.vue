@@ -4,28 +4,53 @@
       <div class="col-12">
         <card
         type="chart"
-
         >
         <template slot="header">
           <div class="row">
-            <div class="col-sm-6">
-              <h5 class="card-category">Total Shipments</h5>
-              <h2 class="card-title">Performance</h2>
+            <div class="col-sm-6" :class="isRTL ? 'text-right' : 'text-left'">
+              <template v-if="!isRTL">
+                <h5 class="card-category">Total Shipments</h5>
+              </template>
+              <template v-else>
+                <h5 class="card-category">مجموع الشحنات</h5>
+              </template>
+              <template v-if="!isRTL">
+                <h2 class="card-title">Performance</h2>
+              </template>
+              <template v-else>
+                <h2 class="card-title">  أداء</h2>
+              </template>
             </div>
-            <div class="col-sm-6 text-right">
+            <div class="col-sm-6">
               <div class="btn-group btn-group-toggle"
-                   data-toggle="buttons">
-                   <label v-for="(option, index) in bigLineChartCategories"
-                          :key="option"
-                          class="btn btn-success btn-sm btn-simple"
-                          :class="{active:bigLineChart.activeIndex === index}"
-                          :id="index">
-                      <input type="radio"
-                            @click="initBigChart(index)"
-                            name="options" autocomplete="off"
-                            :checked="bigLineChart.activeIndex === index">
-                      {{ option }}
-                   </label>
+                   data-toggle="buttons"
+                   :class="isRTL ? 'float-left' : 'float-right'">
+                   <template v-if="!isRTL">
+                     <label v-for="(option, index) in bigLineChartCategories"
+                            :key="option"
+                            class="btn btn-success btn-sm btn-simple"
+                            :class="{active:bigLineChart.activeIndex === index}"
+                            :id="index">
+                        <input type="radio"
+                              @click="initBigChart(index)"
+                              name="options" autocomplete="off"
+                              :checked="bigLineChart.activeIndex === index">
+                        {{ option }}
+                     </label>
+                   </template>
+                   <template v-else>
+                     <label v-for="(option, index) in bigLineChartCategoriesAr"
+                            :key="option"
+                            class="btn btn-success btn-sm btn-simple"
+                            :class="{active:bigLineChart.activeIndex === index}"
+                            :id="index">
+                        <input type="radio"
+                              @click="initBigChart(index)"
+                              name="options" autocomplete="off"
+                              :checked="bigLineChart.activeIndex === index">
+                        {{ option }}
+                     </label>
+                   </template>
               </div>
             </div>
           </div>
@@ -43,7 +68,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card
         type="chart"
         cardCol
@@ -102,8 +127,8 @@
           <template slot="header">
             <h6 class="title d-inline">Tasks(5)</h6>
             <p class="card-category d-inline">Today</p>
-            <drop-down tag="div">
-              <button aria-label="Settings menu" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-link btn-icon">
+            <drop-down tag="div" :class="isRTL ? 'float-left' : ''">
+              <button aria-label="Settings menu" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-link btn-icon" :class="isRTL ? 'pl-5' : ''">
                 <i class="tim-icons icon-settings-gear-63"></i>
               </button>
               <ul class="dropdown-menu dropdown-menu-right">
@@ -156,6 +181,11 @@ export default {
         "Accounts",
         "Purchases",
         "Sessions"
+      ],
+      bigLineChartCategoriesAr:[
+        "حسابات",
+        "المشتريات",
+        "جلسات"
       ],
       bigLineChart: {
         allData: [
@@ -237,6 +267,14 @@ export default {
       }
     }
   },
+  computed:{
+    enableRTL() {
+      return this.$route.query.enableRTL;
+    },
+    isRTL(){
+      return this.$rtl.isRTL;
+    }
+  },
   methods:{
     initBigChart(index) {
       let chartData = {
@@ -263,7 +301,18 @@ export default {
     }
   },
   mounted(){
+    // this.i18n = this.$i18n;
+    if (this.enableRTL) {
+      // this.i18n.locale = 'ar';
+      this.$rtl.enableRTL();
+    }
     this.initBigChart(0);
+  },
+  beforeDestroy() {
+    if (this.$rtl.isRTL) {
+      // this.i18n.locale = 'en';
+      this.$rtl.disableRTL();
+    }
   }
 }
 </script>
