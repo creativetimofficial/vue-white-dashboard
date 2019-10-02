@@ -1,7 +1,7 @@
 <template>
   <div
       class="sidebar"
-      :data="activeColor">
+      :data="backgroundColor">
       <div class="sidebar-wrapper text-left">
         <div class="logo">
           <a href="javascript:void(0)" class="simple-text logo-mini">
@@ -14,7 +14,7 @@
         </div>
         <ul class="nav">
           <slot>
-            <sidebar-link >
+            <sidebar-link>
             </sidebar-link>
           </slot>
         </ul>
@@ -38,7 +38,7 @@ export default{
       type: String,
       default: "Creative Tim"
     },
-    activeColor: {
+    backgroundColor: {
       type: String,
       default: "green"
     },

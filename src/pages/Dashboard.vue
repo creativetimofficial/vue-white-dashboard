@@ -72,10 +72,11 @@
         <card
         type="chart"
         cardCol
-        icon="icon-bell-55 text-success"
-        title="763,215"
-        subTitle="Total Shipments"
         >
+        <template slot="header">
+          <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
+          <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
+        </template>
           <line-chart
                   class="chart-area"
                   chart-id="green-line-chart"
@@ -90,10 +91,11 @@
         <card
         type="chart"
         cardCol
-        icon="icon-delivery-fast text-info"
-        title=" 3,500€"
-        subTitle="Daily Sales"
         >
+        <template slot="header">
+          <h5 class="card-category">{{$t('dashboard.dailySales')}}</h5>
+          <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
+        </template>
           <bar-chart
                   class="chart-area"
                   chart-id="blue-bar-chart"
@@ -107,10 +109,11 @@
         <card
         type="chart"
         cardCol
-        icon="icon-send text-primary"
-        title="12,100k"
-        subTitle="Completed Tasks"
         >
+        <template slot="header">
+          <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>
+          <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> 12,100K</h3>
+        </template>
           <line-chart
                   class="chart-area"
                   chart-id="purple-line-chart"
@@ -125,8 +128,15 @@
       <div class="col-lg-6 col-md-12">
         <card type="tasks">
           <template slot="header">
-            <h6 class="title d-inline">Tasks(5)</h6>
-            <p class="card-category d-inline">Today</p>
+            <template v-if="!isRTL">
+              <h6 class="title d-inline">Tasks(5)</h6>
+            </template>
+            <template v-else>
+              <h6 class="title d-inline">الشحنات</h6>
+            </template>
+            <template v-if="!isRTL">
+              <p class="card-category d-inline">Today</p>
+            </template>
             <drop-down tag="div" :class="isRTL ? 'float-left' : ''">
               <button aria-label="Settings menu" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-link btn-icon" :class="isRTL ? 'pl-5' : ''">
                 <i class="tim-icons icon-settings-gear-63"></i>
@@ -145,7 +155,14 @@
       </div>
       <div class="col-lg-6 col-md-12">
         <card class="card">
-          <h4 slot="header" class="card-title">Simple Table</h4>
+          <h4 slot="header" class="card-title">
+            <template v-if="!isRTL">
+              Simple Table
+            </template>
+            <template v-else>
+              جدول بسيط
+            </template>
+          </h4>
           <div class="table-responsive">
             <user-table></user-table>
           </div>
@@ -301,16 +318,16 @@ export default {
     }
   },
   mounted(){
-    // this.i18n = this.$i18n;
+    this.i18n = this.$i18n;
     if (this.enableRTL) {
-      // this.i18n.locale = 'ar';
+      this.i18n.locale = 'ar';
       this.$rtl.enableRTL();
     }
     this.initBigChart(0);
   },
   beforeDestroy() {
     if (this.$rtl.isRTL) {
-      // this.i18n.locale = 'en';
+      this.i18n.locale = 'en';
       this.$rtl.disableRTL();
     }
   }

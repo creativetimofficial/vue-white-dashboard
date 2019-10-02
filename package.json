@@ -14,7 +14,10 @@
     "vue-chartjs": "^3.4.2",
     "vue-click-outside": "^1.0.7",
     "vue-clickaway": "^2.2.2",
+    "vue-github-buttons": "^3.1.0",
+    "vue-i18n": "^8.14.1",
     "vue-router": "^3.0.3",
+    "vue-social-sharing": "^2.4.6",
     "vue2-transitions": "^0.3.0"
   },
   "devDependencies": {
