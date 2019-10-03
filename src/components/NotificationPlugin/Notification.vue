@@ -1,11 +1,10 @@
 <template>
   <div @click="tryClose"
-       data-notify="conainer"
+       data-notify="container"
        class="alert open"
        :class="[{'alert-with-icon': icon}, verticalAlign, horizontalAlign, alertType]"
        role="alert"
-       :style="customPosition"
-       data-notify-position="top-center">
+       :style="customPosition">
     <button
         v-if="showClose"
         type="button"
@@ -144,5 +143,27 @@ export default{
   }
 }
 </script>
-<style>
+<style lang="scss">
+.notifications .alert {
+  position: fixed;
+  z-index: 10000;
+  text-align: left;
+
+  &[data-notify='container'] {
+    width: 480px;
+    cursor: pointer;
+  }
+
+  &.center {
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+  }
+  &.left {
+    left: 20px;
+  }
+  &.right {
+    right: 20px;
+  }
+}
 </style>
