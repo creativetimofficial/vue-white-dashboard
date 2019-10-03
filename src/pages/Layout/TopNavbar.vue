@@ -1,9 +1,12 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+  <nav class="navbar navbar-expand-lg navbar-absolute"
+       :class="{'bg-white': showMenu, 'navbar-transparent': !showMenu}">
     <div class="container-fluid">
       <div class="navbar-wrapper">
-        <div class="navbar-toggle d-inline">
-          <button type="button" class="navbar-toggler">
+        <div class="navbar-toggle d-inline" :class="{toggled: $sidebar.showSidebar}">
+          <button type="button"
+                  class="navbar-toggler"
+                  @click="toggleSidebar">
             <span class="navbar-toggler-bar bar1"></span>
             <span class="navbar-toggler-bar bar2"></span>
             <span class="navbar-toggler-bar bar3"></span>
@@ -11,12 +14,17 @@
         </div>
         <a class="navbar-brand" href="javascript:void(0)"> {{ $route.name }}</a>
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button"
+              @click="toggleMenu"
+              data-toggle="collapse"
+              data-target="#navigation"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
         <span class="navbar-toggler-bar navbar-kebab"></span>
         <span class="navbar-toggler-bar navbar-kebab"></span>
         <span class="navbar-toggler-bar navbar-kebab"></span>
       </button>
-      <div class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse show text-left" v-show="showMenu">
         <ul class="navbar-nav" :class="$rtl.isRTL ? 'mr-auto' : 'ml-auto'">
           <li class="search-bar input-group"  @click="searchModalVisible = true">
             <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
@@ -34,7 +42,7 @@
             <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle nav-link">
               <div class="notification d-none d-lg-block d-xl-block"></div>
               <i class="tim-icons icon-sound-wave"></i>
-              <p class="d-lg-none">
+              <p class="d-lg-none text-left">
                 Notifications
               </p>
             </a>
@@ -72,18 +80,30 @@
 
 import DropDown from "@/components/Dropdown.vue";
 import Modal from "@/components/Modal.vue";
-
+import {
+  SidebarPlugin
+} from "@/components/index";
 
   export default{
     components:{
       DropDown,
-      Modal
+      Modal,
+      SidebarPlugin
     },
     data() {
       return {
         searchModalVisible: false,
-        searchQuery: ''
+        searchQuery: '',
+        showMenu: false
       };
+    },
+    methods:{
+      toggleSidebar(){
+        this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
+      },
+      toggleMenu(){
+        this.showMenu  = !this.showMenu;
+      }
     },
     computed:{
       isRTL() {

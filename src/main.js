@@ -14,6 +14,7 @@ import GlobalDirectives from "./globalDirectives";
 import RTLPlugin from "./RTLPlugin";
 import Notify from "@/components/NotificationPlugin";
 import i18n from "./i18n"
+import SideBar from "@/components/SidebarPlugin";
 
 
 Vue.config.productionTip = false;
@@ -33,6 +34,7 @@ Vue.use(VueGitHubButtons, { useCache: true });
 Vue.use(GlobalComponents);
 Vue.use(GlobalDirectives);
 Vue.use(RTLPlugin);
+Vue.use(SideBar);
 Vue.use(Notify);
 
 new Vue({

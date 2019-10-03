@@ -82,7 +82,7 @@
     <div class="main-panel" :data="backgroundColor">
       <top-navbar></top-navbar>
 
-      <dashboard-content></dashboard-content>
+      <dashboard-content @click.native="toggleSidebar"></dashboard-content>
 
       <content-footer></content-footer>
     </div>
@@ -120,6 +120,13 @@ export default{
   computed: {
     isRTL() {
       return this.$rtl.isRTL;
+    }
+  },
+  methods: {
+    toggleSidebar() {
+      if (this.$sidebar.showSidebar) {
+        this.$sidebar.displaySidebar(false);
+      }
     }
   }
 };
