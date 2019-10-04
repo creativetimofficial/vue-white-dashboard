@@ -3,7 +3,7 @@ import * as Components from '@/components/index'
 import LineChart from '@/components/Charts/LineChart'
 import BarChart from '@/components/Charts/BarChart'
 import Notification from '@/components/NotificationPlugin/Notification'
-// import Dashboard from '@/plugins/blackDashboard'
+import Dashboard from '@/globalComponents'
 import VueClipboard from 'vue-clipboard2'
 import './docs.css'
 import './doc_styles.scss'
@@ -15,7 +15,7 @@ export default ({
                   router, // the router instance for the app
                   siteData
                 }) => {
-  // Vue.use(Dashboard)
+  Vue.use(Dashboard)
   Vue.use(VueClipboard);
   Vue.component('demo-block', DemoBlock);
   Vue.component(LineChart.name, LineChart);

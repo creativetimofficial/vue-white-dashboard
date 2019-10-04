@@ -3,7 +3,7 @@
           data-toggle="collapse"
           :data-target="target"
           :aria-controls="target"
-          :aria-expanded="toggle"
+          :aria-expanded="toggled"
           aria-label="Toggle navigation">
   </button>
 </template>

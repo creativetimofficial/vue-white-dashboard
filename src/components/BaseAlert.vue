@@ -19,15 +19,19 @@
     props:{
       type:{
         type: String,
-        default: 'default'
+        default: 'default',
+        description: "Alert type"
+
       },
       withIcon:{
         type: Boolean,
-        default: false
+        default: false,
+        description: "Whether alert contains icon"
       },
       dismissible: {
         type: Boolean,
-        default: false
+        default: false,
+        description: "Whether alert is dismissible (closeable)"
       }
     },
     data(){
