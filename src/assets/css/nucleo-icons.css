@@ -41,7 +41,7 @@ Created using IcoMoon - icomoon.io
   min-height: 168px;
 }
 .font-icon-detail i{
-    color: #FFFFFF;
+    color: $black;
     font-size: 1.5em;
   }
 

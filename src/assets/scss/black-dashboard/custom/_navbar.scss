@@ -60,6 +60,13 @@
         color: $black-states;
       }
 
+      .search-bar.input-group .form-control{
+        color: $default;
+        &::placeholder{
+          color: $dark-gray;
+        }
+      }
+
   }
 
   &.bg-white{

@@ -22,7 +22,6 @@
     }
 
     .nav-link {
-      color: $white;
       padding: 0 $padding-base-vertical;
       font-size: $font-size-sm;
       text-transform: uppercase;
@@ -38,13 +37,17 @@
     .copyright{
         font-size: $font-size-sm;
         line-height: 1.8;
-        color: $white;
+        color: $black-states;
     }
 
     &:after{
         display: table;
         clear: both;
         content: " ";
+    }
+
+    ul li a{
+      color: $black-states;
     }
 }
 

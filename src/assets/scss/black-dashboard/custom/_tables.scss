@@ -1,6 +1,12 @@
 .table{
+
+
+  > thead > tr > th, button.btn-neutral.btn-link{
+    color: rgba($black, 0.7);
+  }
+
   > tbody > tr > td {
-    color: rgba(255, 255, 255, 0.7) !important;
+      color: rgba($black, 0.7) !important;
 
     .photo {
       height: 30px;
@@ -86,7 +92,6 @@
        text-transform: uppercase;
        font-weight: $font-weight-extra-bold;
        border: 0;
-       color: rgba($white, 0.7);
    }
 
    .radio,
@@ -114,7 +119,7 @@
    > thead > tr > td,
    > tbody > tr > td,
    > tfoot > tr > td{
-       border-color: rgba(255, 255, 255, 0.1);
+       border-color: rgba($black, 0.2);
        padding: 12px 7px;
        vertical-align: middle;
    }

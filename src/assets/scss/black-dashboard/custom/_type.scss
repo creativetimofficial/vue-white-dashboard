@@ -5,11 +5,15 @@ body {
 
 }
 
+h1, h2, h3, h4, h5, h6, p, ol li, ul li, pre {
+  color: $black-states;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: $headings-line-height;
-
 }
+
 p{
   font-weight: $font-weight-light;
 }
@@ -23,7 +27,7 @@ textarea{
 }
 .card{
   h1,h2,h3,h4,h5,h6,p{
-    color: $opacity-8;
+    color: $black;
   }
 }
 h1,h2,h3,h4,h5,h6{
@@ -159,14 +163,6 @@ p{
             color: $opacity-8;
         }
     }
-}
-
-ul li, ol li{
-  color: $white;
-}
-
-pre{
-  color: $opacity-8;
 }
 
 hr{
