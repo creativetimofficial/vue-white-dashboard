@@ -1,10 +1,10 @@
 
 /*
  =========================================================
- * Black Dashboard - v1.0.0
+ * white Dashboard - v1.0.0
  =========================================================
 
- * Product Page: https://www.creative-tim.com/product/black-dashboard
+ * Product Page: https://www.creative-tim.com/product/white-dashboard
  * Copyright 2018 Creative Tim (http://www.creative-tim.com) & UPDIVISION (https://updivision.com)
 
 
@@ -16,83 +16,83 @@
 
  // Core
 
-@import "black-dashboard/custom/functions";
-@import "black-dashboard/bootstrap/functions";
+@import "white-dashboard/custom/functions";
+@import "white-dashboard/bootstrap/functions";
 
-@import "black-dashboard/custom/variables";
-@import "black-dashboard/bootstrap/variables";
+@import "white-dashboard/custom/variables";
+@import "white-dashboard/bootstrap/variables";
 
-@import "black-dashboard/custom/mixins";
-@import "black-dashboard/bootstrap/mixins";
+@import "white-dashboard/custom/mixins";
+@import "white-dashboard/bootstrap/mixins";
 
  // Bootstrap components
 
-@import "black-dashboard/bootstrap/root";
-@import "black-dashboard/bootstrap/reboot";
-@import "black-dashboard/bootstrap/type";
-@import "black-dashboard/bootstrap/images";
-@import "black-dashboard/bootstrap/code";
-@import "black-dashboard/bootstrap/grid";
-@import "black-dashboard/bootstrap/tables";
-@import "black-dashboard/bootstrap/forms";
-@import "black-dashboard/bootstrap/buttons";
-@import "black-dashboard/bootstrap/transitions";
-@import "black-dashboard/bootstrap/dropdown";
-@import "black-dashboard/bootstrap/button-group";
-@import "black-dashboard/bootstrap/input-group";
-@import "black-dashboard/bootstrap/custom-forms";
-@import "black-dashboard/bootstrap/nav";
-@import "black-dashboard/bootstrap/navbar";
-@import "black-dashboard/bootstrap/card";
-@import "black-dashboard/bootstrap/breadcrumb";
-@import "black-dashboard/bootstrap/pagination";
-@import "black-dashboard/bootstrap/badge";
-@import "black-dashboard/bootstrap/jumbotron";
-@import "black-dashboard/bootstrap/alert";
-@import "black-dashboard/bootstrap/progress";
-@import "black-dashboard/bootstrap/media";
-@import "black-dashboard/bootstrap/list-group";
-@import "black-dashboard/bootstrap/close";
-@import "black-dashboard/bootstrap/modal";
-@import "black-dashboard/bootstrap/tooltip";
-@import "black-dashboard/bootstrap/popover";
-@import "black-dashboard/bootstrap/carousel";
-@import "black-dashboard/bootstrap/utilities";
-@import "black-dashboard/bootstrap/print";
+@import "white-dashboard/bootstrap/root";
+@import "white-dashboard/bootstrap/reboot";
+@import "white-dashboard/bootstrap/type";
+@import "white-dashboard/bootstrap/images";
+@import "white-dashboard/bootstrap/code";
+@import "white-dashboard/bootstrap/grid";
+@import "white-dashboard/bootstrap/tables";
+@import "white-dashboard/bootstrap/forms";
+@import "white-dashboard/bootstrap/buttons";
+@import "white-dashboard/bootstrap/transitions";
+@import "white-dashboard/bootstrap/dropdown";
+@import "white-dashboard/bootstrap/button-group";
+@import "white-dashboard/bootstrap/input-group";
+@import "white-dashboard/bootstrap/custom-forms";
+@import "white-dashboard/bootstrap/nav";
+@import "white-dashboard/bootstrap/navbar";
+@import "white-dashboard/bootstrap/card";
+@import "white-dashboard/bootstrap/breadcrumb";
+@import "white-dashboard/bootstrap/pagination";
+@import "white-dashboard/bootstrap/badge";
+@import "white-dashboard/bootstrap/jumbotron";
+@import "white-dashboard/bootstrap/alert";
+@import "white-dashboard/bootstrap/progress";
+@import "white-dashboard/bootstrap/media";
+@import "white-dashboard/bootstrap/list-group";
+@import "white-dashboard/bootstrap/close";
+@import "white-dashboard/bootstrap/modal";
+@import "white-dashboard/bootstrap/tooltip";
+@import "white-dashboard/bootstrap/popover";
+@import "white-dashboard/bootstrap/carousel";
+@import "white-dashboard/bootstrap/utilities";
+@import "white-dashboard/bootstrap/print";
 
  // Custom components
 
- @import "black-dashboard/custom/alerts.scss";
- @import "black-dashboard/custom/buttons.scss";
- @import "black-dashboard/custom/dropdown.scss";
- @import "black-dashboard/custom/footer.scss";
- @import "black-dashboard/custom/forms.scss";
- @import "black-dashboard/custom/images.scss";
- @import "black-dashboard/custom/modal.scss";
- @import "black-dashboard/custom/navbar.scss";
- @import "black-dashboard/custom/type.scss";
- @import "black-dashboard/custom/tables";
- @import "black-dashboard/custom/checkboxes-radio";
- @import "black-dashboard/custom/fixed-plugin";
- @import "black-dashboard/custom/sidebar-and-main-panel.scss";
- @import "black-dashboard/custom/misc.scss";
- @import "black-dashboard/custom/rtl.scss";
- @import "black-dashboard/custom/input-group.scss";
+ @import "white-dashboard/custom/alerts.scss";
+ @import "white-dashboard/custom/buttons.scss";
+ @import "white-dashboard/custom/dropdown.scss";
+ @import "white-dashboard/custom/footer.scss";
+ @import "white-dashboard/custom/forms.scss";
+ @import "white-dashboard/custom/images.scss";
+ @import "white-dashboard/custom/modal.scss";
+ @import "white-dashboard/custom/navbar.scss";
+ @import "white-dashboard/custom/type.scss";
+ @import "white-dashboard/custom/tables";
+ @import "white-dashboard/custom/checkboxes-radio";
+ @import "white-dashboard/custom/fixed-plugin";
+ @import "white-dashboard/custom/sidebar-and-main-panel.scss";
+ @import "white-dashboard/custom/misc.scss";
+ @import "white-dashboard/custom/rtl.scss";
+ @import "white-dashboard/custom/input-group.scss";
 
 
  // Vendor / Plugins
 
-@import "black-dashboard/custom/vendor/plugin-perfect-scrollbar.scss";
-@import "black-dashboard/custom/vendor/plugin-animate-bootstrap-notify.scss";
+@import "white-dashboard/custom/vendor/plugin-perfect-scrollbar.scss";
+@import "white-dashboard/custom/vendor/plugin-animate-bootstrap-notify.scss";
 
 // Cards
 
-@import 'black-dashboard/custom/card';
-@import "black-dashboard/custom/cards/card-chart";
-@import "black-dashboard/custom/cards/card-map";
-@import "black-dashboard/custom/cards/card-user";
-@import "black-dashboard/custom/cards/card-task";
-@import "black-dashboard/custom/cards/card-plain";
+@import 'white-dashboard/custom/card';
+@import "white-dashboard/custom/cards/card-chart";
+@import "white-dashboard/custom/cards/card-map";
+@import "white-dashboard/custom/cards/card-user";
+@import "white-dashboard/custom/cards/card-task";
+@import "white-dashboard/custom/cards/card-plain";
 
 .full-page {
     &.pricing-page, &.login-page, &.lock-page, &.register-page {

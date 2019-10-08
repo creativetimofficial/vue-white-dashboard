@@ -4,32 +4,32 @@
       <div class="col-md-12">
         <card>
           <template slot="header">
-            <h5 class="card-category">Black Table Heading</h5>
+            <h5 class="card-category">White Table Heading</h5>
             <h3 class="card-title">Created using Poppins Font Family</h3>
           </template>
           <div class="typography-line text-left mt-5">
             <h1>
-              <span>Header 1</span>The Life of Black Dashboard </h1>
+              <span>Header 1</span>The Life of White Dashboard </h1>
           </div>
           <div class="typography-line text-left">
             <h2>
-              <span>Header 2</span>The Life of Black Dashboard </h2>
+              <span>Header 2</span>The Life of White Dashboard </h2>
           </div>
           <div class="typography-line text-left">
             <h3>
-              <span>Header 3</span>The Life of Black Dashboard </h3>
+              <span>Header 3</span>The Life of White Dashboard </h3>
           </div>
           <div class="typography-line text-left">
             <h4>
-              <span>Header 4</span>The Life of Black Dashboard </h4>
+              <span>Header 4</span>The Life of White Dashboard </h4>
           </div>
           <div class="typography-line text-left">
             <h5>
-              <span>Header 5</span>The Life of Black Dashboard </h5>
+              <span>Header 5</span>The Life of White Dashboard </h5>
           </div>
           <div class="typography-line text-left">
             <h6>
-              <span>Header 6</span>The Life of Black Dashboard </h6>
+              <span>Header 6</span>The Life of White Dashboard </h6>
           </div>
           <div class="typography-line text-left">
             <p>
