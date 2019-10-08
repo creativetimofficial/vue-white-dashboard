@@ -10,11 +10,15 @@ You can use the defaul trigger which is an `<a>` or  change to a custom one via 
 
 :::demo
 ```html
-<drop-down tag="div" title-classes="btn btn-secondary"
-               title="Regular">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+<drop-down tag="div">
+  <button aria-label="Regular" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-secondary"><i></i>
+    Regular
+  </button>
+  <ul class="dropdown-menu">
+    <a href="#" class="dropdown-item">Action</a>
+    <a href="#" class="dropdown-item">Another action</a>
+    <a href="#" class="dropdown-item">Something else here</a>
+  </ul>
 </drop-down>
 ```
 :::
@@ -23,12 +27,16 @@ You can use the defaul trigger which is an `<a>` or  change to a custom one via 
 
 :::demo
 ```html
-<drop-down title-classes="btn btn-secondary"
-               title="Dropdown link">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </drop-down>
+<drop-down tag="div">
+  <button aria-label="Dropdown link" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-secondary">
+    Dropdown link
+  </button>
+  <ul class="dropdown-menu">
+    <a href="#" class="dropdown-item">Action</a>
+    <a href="#" class="dropdown-item">Another action</a>
+    <a href="#" class="dropdown-item">Something else here</a>
+  </ul>
+</drop-down>
 ```
 :::
 
@@ -39,48 +47,83 @@ The best part is you can do this with any button variant, too:
 :::demo
 ```html
 <div class="btn-group">
-   <drop-down title="Primary" title-classes="btn btn-primary">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </drop-down>
-   <drop-down title="Secondary" title-classes="btn btn-secondary">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </drop-down>
-   <drop-down title="Success" title-classes="btn btn-success">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </drop-down>    
-   <drop-down title="Info" title-classes="btn btn-info">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </drop-down>     
-   <drop-down title="Warning" title-classes="btn btn-warning">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </drop-down>  
-   <drop-down title="Danger" title-classes="btn btn-danger">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </drop-down>        
+   <drop-down tag="div">
+     <button aria-label="Primary" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-primary">
+        Primary
+     </button>
+     <ul class="dropdown-menu">
+       <a href="#" class="dropdown-item">Action</a>
+       <a href="#" class="dropdown-item">Another action</a>
+       <a href="#" class="dropdown-item">Something else here</a>
+       <div class="dropdown-divider"></div>
+       <a href="#" class="dropdown-item">Separated link</a>
+     </ul>
+   </drop-down>
+
+   <drop-down tag="div">
+     <button aria-label="Secondary" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-secondary">
+        Secondary
+     </button>
+     <ul class="dropdown-menu">
+       <a href="#" class="dropdown-item">Action</a>
+       <a href="#" class="dropdown-item">Another action</a>
+       <a href="#" class="dropdown-item">Something else here</a>
+       <div class="dropdown-divider"></div>
+       <a href="#" class="dropdown-item">Separated link</a>
+     </ul>
+   </drop-down>
+
+   <drop-down tag="div">
+     <button aria-label="Success" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-success">
+        Success
+     </button>
+     <ul class="dropdown-menu">
+       <a href="#" class="dropdown-item">Action</a>
+       <a href="#" class="dropdown-item">Another action</a>
+       <a href="#" class="dropdown-item">Something else here</a>
+       <div class="dropdown-divider"></div>
+       <a href="#" class="dropdown-item">Separated link</a>
+     </ul>
+   </drop-down>
+
+   <drop-down tag="div">
+     <button aria-label="Info" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-info">
+        Info
+     </button>
+     <ul class="dropdown-menu">
+       <a href="#" class="dropdown-item">Action</a>
+       <a href="#" class="dropdown-item">Another action</a>
+       <a href="#" class="dropdown-item">Something else here</a>
+       <div class="dropdown-divider"></div>
+       <a href="#" class="dropdown-item">Separated link</a>
+     </ul>
+   </drop-down>
+
+   <drop-down tag="div">
+     <button aria-label="Warning" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-warning">
+        Warning
+     </button>
+     <ul class="dropdown-menu">
+       <a href="#" class="dropdown-item">Action</a>
+       <a href="#" class="dropdown-item">Another action</a>
+       <a href="#" class="dropdown-item">Something else here</a>
+       <div class="dropdown-divider"></div>
+       <a href="#" class="dropdown-item">Separated link</a>
+     </ul>
+   </drop-down>
+
+   <drop-down tag="div">
+     <button aria-label="Danger" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-danger">
+        Danger
+     </button>
+     <ul class="dropdown-menu">
+       <a href="#" class="dropdown-item">Action</a>
+       <a href="#" class="dropdown-item">Another action</a>
+       <a href="#" class="dropdown-item">Something else here</a>
+       <div class="dropdown-divider"></div>
+       <a href="#" class="dropdown-item">Separated link</a>
+     </ul>
+   </drop-down>
 </div>
 ```
 :::
@@ -95,21 +138,17 @@ Those extra changes keep the caret centered in the split button and provide a mo
 ```html
 <div>
   <drop-down class="btn-group">
-    <template slot="title-container" slot-scope="{isOpen}">
-     <base-button type="danger">Action</base-button>
-      <base-button type="danger" class="dropdown-toggle dropdown-toggle-split"
-                   data-toggle="dropdown"
-                   aria-haspopup="true"
-                   :aria-expanded="isOpen">
-        <span class="sr-only">Toggle Dropdown</span>
-      </base-button>
-    </template>
-
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
+    <button type="button" class="btn btn-danger">Action</button>
+    <button type="button" class="btn dropdown-toggle dropdown-toggle-split btn-danger" data-toggle="dropdown" aria-haspopup="true">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      <a href="#" class="dropdown-item">Action</a>
+      <a href="#" class="dropdown-item">Another action</a>
+      <a href="#" class="dropdown-item">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a href="#" class="dropdown-item">Separated link</a>
+    </ul>
   </drop-down>
 </div>
 ```
@@ -121,12 +160,10 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 
 :::demo
 ```html
-<drop-down class="dropup"
-               title-classes="btn btn-secondary"
-               title="Dropup">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+<drop-down tag="div" class="dropup">
+  <button aria-label="Dropup" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-secondary"><i></i>
+      Dropup
+    </button> <ul class="dropdown-menu"><a href="#" class="dropdown-item">Action</a> <a href="#" class="dropdown-item">Another action</a> <a href="#" class="dropdown-item">Something else here</a></ul>
 </drop-down>
 ```
 :::
@@ -137,13 +174,16 @@ Set for the `menu-classes` to `.dropdown-black` class to change the drodown back
 
 :::demo
 ```html
-<drop-down menu-classes="dropdown-black"
-               title-classes="btn btn-secondary"
-               title="Black menu">
+<drop-down tag="div">
+  <button aria-label="Black menu" data-toggle="dropdown" class="dropdown-toggle btn-rotate btn btn-secondary">
+    Black menu
+  </button>
+  <ul class="dropdown-menu dropdown-black">
     <h6 class="dropdown-header">Dropdown header</h6>
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a href="#" class="dropdown-item">Action</a>
+    <a href="#" class="dropdown-item">Another action</a>
+    <a href="#" class="dropdown-item">Something else here</a>
+  </ul>
 </drop-down>
 ```
 :::

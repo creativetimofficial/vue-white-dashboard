@@ -4,10 +4,10 @@ We created a custom notification plugin so you can easily display pretty notific
 in your dashboard.
 
 
-The plugin is globally registered inside `blackDashboard.js` file and you can use it everywhere 
+The plugin is globally registered inside `blackDashboard.js` file and you can use it everywhere
 in the dashboard.
 
-In order for the plugin to work, we need to declare this piece of code in the top most component 
+In order for the plugin to work, we need to declare this piece of code in the top most component
 of our app. This is done inside `App.vue` file.
 
 You can trigger notifications both from template and javascript via `$notify` or `this.$notify` method.
@@ -30,7 +30,7 @@ You can trigger notifications both from template and javascript via `$notify` or
 ```
 :::
 
-#### Notification position 
+#### Notification position
 
 :::demo
 ```html
@@ -38,7 +38,7 @@ You can trigger notifications both from template and javascript via `$notify` or
   <base-button @click="notifyTopLeft">Top left</base-button>
   <base-button @click="notifyTopCenter">Top center</base-button>
   <base-button @click="notifyTopRight">Top right</base-button>
-  
+
   <base-button @click="notifyBottomLeft">Bottom left</base-button>
   <base-button @click="notifyBottomCenter">Bottom center</base-button>
   <base-button @click="notifyBottomRight">Bottom right</base-button>

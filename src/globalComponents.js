@@ -1,3 +1,6 @@
+import BaseButton from "./components/BaseButton.vue";
+import BaseCheckbox from "./components/BaseCheckbox.vue";
+import BaseRadio from "./components/BaseRadio.vue";
 import DropDown from "./components/Dropdown.vue";
 import Notify from "./components/NotificationPlugin";
 
@@ -11,9 +14,11 @@ import "@/assets/demo/demo.css";
 
 const GlobalComponents = {
   install(Vue) {
+    Vue.component("base-button", BaseButton);
+    Vue.component("base-checkbox", BaseCheckbox);
+    Vue.component("base-radio", BaseRadio);
     Vue.component("drop-down", DropDown);
     Vue.component("notify", Notify);
-
   }
 };
 

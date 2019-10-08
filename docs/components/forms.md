@@ -29,8 +29,9 @@ Keep reading for documentation on required classes, form layout, and more.
                   placeholder="Password">
       </base-input>
       <base-checkbox>
-        Option one is this 
+        Option one is this
      </base-checkbox>
+
      <base-button native-type="submit" type="primary">Submit</button>
     </form>
 </card>
@@ -360,13 +361,13 @@ Add the `disabled` boolean attribute on an input to prevent user interactions an
 
 #### Caveat with anchors
 
-By default, browsers will treat all native form controls 
+By default, browsers will treat all native form controls
 ( `<input>`, `<select>` and `<button>` elements)
- inside a `<fieldset disabled>` as disabled, 
+ inside a `<fieldset disabled>` as disabled,
  preventing both keyboard and mouse interactions on them.
- However, if your form also includes `<a ... class="btn btn-*">` elements, 
- these will only be given a style of pointer-events: none. As noted in 
- the section about disabled state for buttons (and specifically in the sub-section for anchor elements), 
+ However, if your form also includes `<a ... class="btn btn-*">` elements,
+ these will only be given a style of pointer-events: none. As noted in
+ the section about disabled state for buttons (and specifically in the sub-section for anchor elements),
  this CSS property is not yet standardized and isn’t fully supported in Opera 18 and below, or in Internet Explorer 10,
  and won’t prevent keyboard users from being able to focus or activate these links.
  So to be safe, use custom JavaScript to disable such links.
@@ -378,7 +379,7 @@ By default, browsers will treat all native form controls
 #### Cross browser compatibility
 
 While Bootstrap will apply these styles in all browsers,
-Internet Explorer 11 and below don’t fully support the disabled 
+Internet Explorer 11 and below don’t fully support the disabled
 attribute on a `<fieldset>`. Use custom JavaScript to disable the fieldset in these browsers.
 
 :::

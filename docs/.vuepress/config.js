@@ -27,7 +27,8 @@ module.exports = {
   themeConfig: {
     sidebarDepth: 1,
 
-    sidebar: [{
+    sidebar: [
+      {
       title: 'Getting Started',
       collapsable: false,
       children: [
