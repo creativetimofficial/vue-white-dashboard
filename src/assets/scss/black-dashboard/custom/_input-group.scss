@@ -162,7 +162,6 @@
     border-left: 0 none;
 }
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-    background-color: $black-states;
     color: $default;
     cursor: not-allowed;
 }
@@ -296,7 +295,6 @@ textarea.form-control{
 
            i{
                font-size: 20px;
-               color: $white;
                margin-top: 0 !important;
            }
            input{

@@ -23,4 +23,13 @@
           background: $color;
       }
 
+      .nav-pills .nav-item .nav-link:not(.active){
+        background: darken($light-bg,10%);
+        color: $black-states;
+        &:hover{
+          background: darken($white,20%);
+
+        }
+      }
+
 }

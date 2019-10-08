@@ -6,6 +6,7 @@
       @click="toggleDropDown"
       v-click-outside="closeDropDown"
       >
+      
       <slot></slot>
 
   </component>

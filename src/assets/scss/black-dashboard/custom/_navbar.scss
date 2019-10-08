@@ -37,6 +37,36 @@
 
   &.navbar-transparent{
     background: transparent !important;
+    .navbar-brand{
+      color: $black-states;
+    }
+
+    .navbar-toggler-bar{
+      background: $black-states;
+    }
+
+    .navbar-nav li a:not(.dropdown-item){
+        color: $black-states;
+        & i{
+          color: $black-states;
+        }
+      }
+
+      .navbar-minimize button i{
+        color: $black-states;
+      }
+
+      .search-bar.input-group i{
+        color: $black-states;
+      }
+
+      .search-bar.input-group .form-control{
+        color: $default;
+        &::placeholder{
+          color: $dark-gray;
+        }
+      }
+
   }
 
   &.bg-white{

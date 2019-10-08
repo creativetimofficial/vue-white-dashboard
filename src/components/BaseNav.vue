@@ -37,11 +37,7 @@ export default {
   name: "base-nav",
   components: {
     NavbarToggleButton
-  }
-}
-
-export default {
-  name: "base-nav",
+  },
   props: {
     expand:{
       type: Boolean,
