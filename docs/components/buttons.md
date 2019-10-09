@@ -1,12 +1,12 @@
 # Buttons
 
-Use Black Dashboard's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+Use White Dashboard's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 
 <hr>
 
 #### Examples
 
-Black Dashboard has changed the predefined button styles from Bootstrap, each serving its own semantic purpose, with a few extras thrown in for more control.
+White Dashboard has changed the predefined button styles from Bootstrap, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 
 :::demo

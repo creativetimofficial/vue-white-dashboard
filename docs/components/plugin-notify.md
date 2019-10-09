@@ -4,7 +4,7 @@ We created a custom notification plugin so you can easily display pretty notific
 in your dashboard.
 
 
-The plugin is globally registered inside `blackDashboard.js` file and you can use it everywhere
+The plugin is globally registered inside `globalComponents.js` file and you can use it everywhere
 in the dashboard.
 
 In order for the plugin to work, we need to declare this piece of code in the top most component

@@ -178,7 +178,7 @@ Here is the list of Bootstrap 4 components that were restyled in Argon:
   </div>
 </div>
 
-#### Vue Black Dashboard components
+#### Vue White Dashboard components
 
 Besides giving the existing Bootstrap elements a new look, we added new ones, so that the interface and consistent and homogenous. Going through them, we added:
 
