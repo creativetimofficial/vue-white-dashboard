@@ -4,15 +4,16 @@
        class="alert open"
        :class="[{'alert-with-icon': icon}, verticalAlign, horizontalAlign, alertType]"
        role="alert"
-       :style="customPosition">
-    <button
-        v-if="showClose"
-        type="button"
-        aria-hidden="true"
-        class="close col-xs-1"
-        data-notify="dismiss"
-        @click="close">
-        <i class="tim-icons icon-simple-remove"></i>
+       :style="customPosition"
+       data-notify-position="top-center">
+      <button
+         v-if="showClose"
+         type="button"
+         aria-hidden="true"
+         class="close col-xs-1"
+         data-notify="dismiss"
+         @click="close">
+         <i class="tim-icons icon-simple-remove"></i>
     </button>
 
     <span v-if="icon" data-notify="icon" :class="['alert-icon', icon]"></span>
@@ -91,6 +92,11 @@ export default{
       type: Boolean,
       default: true
     }
+  },
+  data() {
+    return {
+      elmHeight: 0
+    };
   },
   computed:{
     hasIcon() {
