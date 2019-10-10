@@ -33,7 +33,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 ## Versions
 [<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-white-dashboard)
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png?raw=true" width="60" height="60" />](https://www.https://www.creative-tim.com/product/white-dashboard-laravel)
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/white-dashboard-laravel)
 
 
 | Vue | Laravel |
