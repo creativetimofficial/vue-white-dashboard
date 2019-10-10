@@ -19,6 +19,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 ## Table of Contents
 
 
+* [Versions](#versions)
 * [Demo](#demo)
 * [Quick Start](#quick-start)
 * [Documentation](#documentation)
@@ -26,21 +27,34 @@ We are very excited to share this dashboard with you and we look forward to hear
 * [Browser Support](#browser-support)
 * [Resources](#resources)
 * [Reporting Issues](#reporting-issues)
-* [Technical Support or Questions](#technical-support-or-questions)
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
 
 
+## Versions
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-white-dashboard)
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png?raw=true" width="60" height="60" />](https://www.https://www.creative-tim.com/product/white-dashboard-laravel)
+
+
+| Vue | Laravel |
+| --- | --- |
+| [![Vue White Dashboard ](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/vue-white-dashboard.jpeg?raw=true)](https://www.creative-tim.com/product/vue-white-dashboard)  | [![White Dashboard Laravel](https://github.com/creativetimofficial/public-assets/blob/master/white-dashboard-laravel/white-dashboard-laravel.jpg?raw=true)](https://www.creative-tim.com/product/white-dashboard-laravel)
+
 ## Demo
 
 - [Start page](https://demos.creative-tim.com/vue-white-dashboard)
-- [User profile page](https://demos.creative-tim.com/vue-white-dashboard/#/profile)
-- [Tables page ](https://demos.creative-tim.com/vue-white-dashboard/#/table-list)
+- [User profile page](https://demos.creative-tim.com/vue-white-dashboard/#/user)
+- [Tables page ](https://demos.creative-tim.com/vue-white-dashboard/#/table)
 - [Maps Page](https://demos.creative-tim.com/vue-white-dashboard/#/maps)
 - [Notifications page](https://demos.creative-tim.com//vue-white-dashboard/#/notifications)
 
-[View More](https://demos.creative-tim.com/vue-white-dashboard).
+| Start page | User profile page | Tables page  |
+| --- | --- | ---  |
+| [![Start page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/start-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard)  | [![User profile page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/profile-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/user)  | [![Tables pages](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/tables-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/table)
 
+| Maps page | Notifications page | RTL page  |
+| --- | --- | ---  |
+| [![Maps page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/maps-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/maps)  | [![Notifications page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/notifications-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/notifications)  | [![RTL page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/rtl-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/dashboard?enableRTL=true)  
 
 ## Quick start
 
@@ -66,9 +80,15 @@ Within the download you'll find the following directories and files:
 
 At present, we officially aim to support the last two versions of the following browsers:
 
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
+<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
 
-
+## Resources
+- Demo: <https://demos.creative-tim.com/vue-white-dashboard/#/dashboard>
+- Download Page: <https://www.creative-tim.com/product/vue-white-dashboard>
+- Documentation: <https://demos.creative-tim.com/vue-white-dashboard/documentation>
+- License Agreement: <https://www.creative-tim.com/license>
+- Support: <https://www.creative-tim.com/contact-us>
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/vue-white-dashboard/issues)
 
 ## Reporting Issues
 
@@ -79,27 +99,27 @@ We use GitHub Issues as the official bug tracker for the Vue White Dashboard. He
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
 
-## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us) instead of opening an issue.
-
-
 ## Licensing
 
-- Copyright 2018 Creative Tim (https://www.creative-tim.com/)
+- Copyright 2019 Creative Tim (https://www.creative-tim.com/)
 
 - Licensed under MIT (https://github.com/creativetimofficial/vue-white-dashboard/issues/blob/master/LICENSE.md)
 
 
-
 ## Useful Links
 
-- [More products](https://www.creative-tim.com/bootstrap-themes) from Creative Tim
 - [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free) from Creative Tim
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new) (earn money)
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=mk-github-readme) (earn money)
+- [Blog Creative Tim](http://blog.creative-tim.com/)
+- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=mk-github-readme) from Creative Tim
+- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=mk-github-readme) from Creative Tim
+- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=mk-github-readme) from Creative Tim
+- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=mk-github-readme) from Creative Tim
+- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=mk-github-readme) from Creative Tim
+- [More products](https://www.creative-tim.com/bootstrap-themes?ref=mk-github-readme) from Creative Tim
+- Check our Bundles [here](https://www.creative-tim.com/bundles?ref=mk-github-readme)
 
-##### Social Media
+### Social Media
 
 Twitter: <https://twitter.com/CreativeTim>
 
@@ -107,6 +127,4 @@ Facebook: <https://www.facebook.com/CreativeTim>
 
 Dribbble: <https://dribbble.com/creativetim>
 
-Google+: <https://plus.google.com/+CreativetimPage>
-
-Instagram: <https://instagram.com/creativetimofficial>
+Instagram: <https://www.instagram.com/CreativeTimOfficial>
