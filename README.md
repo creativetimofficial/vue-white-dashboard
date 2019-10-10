@@ -38,7 +38,7 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 | Vue | Laravel |
 | --- | --- |
-| [![Vue White Dashboard ](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/vue-white-dashboard.jpeg?raw=true)](https://www.creative-tim.com/product/vue-white-dashboard)  | [![White Dashboard Laravel](https://github.com/creativetimofficial/public-assets/blob/master/white-dashboard-laravel/white-dashboard-laravel.jpeg?raw=true)](https://www.https://www.creative-tim.com/product/white-dashboard-laravel)
+| [![Vue White Dashboard ](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/vue-white-dashboard.jpeg?raw=true)](https://www.creative-tim.com/product/vue-white-dashboard)  | [![White Dashboard Laravel](https://github.com/creativetimofficial/public-assets/blob/master/white-dashboard-laravel/white-dashboard-laravel.jpg?raw=true)](https://www.https://www.creative-tim.com/product/white-dashboard-laravel)
 
 ## Demo
 
