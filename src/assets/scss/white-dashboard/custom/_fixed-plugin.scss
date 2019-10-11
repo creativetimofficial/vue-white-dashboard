@@ -29,7 +29,6 @@
         width: 290px;
         border-radius: 0.1875rem;
         padding: 0 10px;
-        background: linear-gradient($black, $black-states);
     }
 
     .dropdown .dropdown-menu .tim-icons{
@@ -142,7 +141,6 @@
     }
 
     li.header-title{
-        color: $white;
         height: 30px;
         line-height: 25px;
         font-size: 12px;
@@ -287,7 +285,7 @@
 
              &:after{
                  border-bottom: .4em solid rgba(0, 0, 0, 0);
-                 border-left: .4em solid $black;
+                 border-left: .4em solid $white;
                  border-top: .4em solid rgba(0,0,0,0);
                  right: -16px;
              }
