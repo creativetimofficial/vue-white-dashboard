@@ -1,12 +1,15 @@
 <template>
   <div class="notifications">
-    <notification
-            v-for="notification in notifications"
-            v-bind="notification"
-            :clickHandler="notification.onClick"
-            :key="notification.timestamp.getTime()"
-            @close="removeNotification">
-    </notification>
+    <transition-group :name="transitionName"
+                      :mode="transitionMode">
+      <notification
+              v-for="notification in notifications"
+              v-bind="notification"
+              :clickHandler="notification.onClick"
+              :key="notification.timestamp.getTime()"
+              @close="removeNotification">
+      </notification>
+    </transition-group>
   </div>
 </template>
 <script>
@@ -15,6 +18,16 @@ import Notification from './Notification.vue';
 export default {
   components: {
     Notification
+  },
+  props: {
+    transitionName: {
+      type: String,
+      default: 'list'
+    },
+    transitionMode: {
+      type: String,
+      default: 'in-out'
+    }
   },
   data() {
     return {
