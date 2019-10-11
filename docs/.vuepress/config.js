@@ -21,6 +21,7 @@ module.exports = {
       )
   },
   head: [
+    ['link', { rel: "icon", href: "/favicon.ico"}],
     ['link', { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" }],
     ['link', { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.0.6/css/all.css" }],
   ],

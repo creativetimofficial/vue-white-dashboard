@@ -184,7 +184,7 @@ textarea.form-control{
     padding: 10px 10px 0 0;
     resize: none;
     border: none;
-    border-bottom: 1px solid lighten($black,5%);
+    border-bottom: 1px solid rgba($black-states,0.5);
     border-radius: 0;
     line-height: 2;
 
