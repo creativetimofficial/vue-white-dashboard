@@ -58,7 +58,7 @@
 .input-group-append .input-group-text,
 .input-group-prepend .input-group-text {
     background-color: transparent;
-    border: 1px solid lighten($black,5%);
+    border: 1px solid rgba($black-states,0.5);
     border-radius: $border-radius-lg;
     color: $white;
 
@@ -97,9 +97,8 @@
 .input-group-prepend .input-group-text,
 .input-group-prepend .input-group-text {
     background-color: transparent;
-    border: 1px solid lighten($black,5%);
     border-radius: $border-radius-lg;
-    color: $white;
+    color: $black;
     margin: 0;
 }
 

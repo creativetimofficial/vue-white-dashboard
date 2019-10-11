@@ -91,12 +91,12 @@ Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightb
                         <base-input alternative
                                     class="mb-3"
                                     placeholder="Email"
-                                    addon-left-icon="ni ni-email-83">
+                                    addon-left-icon="tim-icons icon-single-02">
                         </base-input>
                         <base-input alternative
                                     type="password"
                                     placeholder="Password"
-                                    addon-left-icon="ni ni-lock-circle-open">
+                                    addon-left-icon="tim-icons icon-lock-circle">
                         </base-input>
                         <base-checkbox>
                             Remember me

@@ -71,7 +71,65 @@ The documentation for the Vue White Dashboard is hosted at our [website](https:/
 Within the download you'll find the following directories and files:
 
 ```
-
+|-- Vue White Dashboard
+    ├── CHANGELOG.md
+    ├── README.md
+    ├── babel.config.js
+    ├── package.json
+    ├── postcss.config.js
+    ├── public
+    └── src
+    ├── App.vue
+    ├── RTLPlugin.js
+    ├── assets
+    │   ├── css
+    │   ├── demo
+    │   ├── fonts
+    │   ├── img
+    │   └── scss
+    │       ├── white-dashboard
+    │       │   ├── bootstrap
+    │       │   ├── custom
+    │       │   └── plugins
+    │       └── white-dashboard.scss
+    ├── components
+    │   ├── BaseAlert.vue
+    │   ├── BaseButton.vue
+    │   ├── BaseCheckbox.vue
+    │   ├── BaseNav.vue
+    │   ├── BaseRadio.vue
+    │   ├── BaseTable.vue
+    │   ├── Cards
+    │   ├── Charts
+    │   ├── CloseButton.vue
+    │   ├── Dropdown.vue
+    │   ├── HelloWorld.vue
+    │   ├── Inputs
+    │   ├── Modal.vue
+    │   ├── NavbarToggleButton.vue
+    │   ├── NotificationPlugin
+    │   ├── SidebarPlugin
+    │   └── index.js
+    ├── config.js
+    ├── globalComponents.js
+    ├── globalDirectives.js
+    ├── i18n.js
+    ├── locales
+    ├── main.js
+    ├── pages
+    │   ├── Dashboard
+    │   ├── Dashboard.vue
+    │   ├── Icons.vue
+    │   ├── Layout
+    │   ├── Maps.vue
+    │   ├── Notifications
+    │   ├── Notifications.vue
+    │   ├── Profile
+    │   ├── TableList.vue
+    │   ├── Typography.vue
+    │   ├── UpgradeToPRO.vue
+    │   └── UserProfile.vue
+    └── router.js
 
 ```
 

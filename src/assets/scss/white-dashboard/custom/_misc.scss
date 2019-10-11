@@ -106,8 +106,15 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
       display: inline-block;
     }
 
+
     .tim-icons{
       color: $black;
+    }
+
+    button{
+      .tim-icons{
+        color: $white;
+      }
     }
 
     .popover .popover-header {
@@ -164,10 +171,6 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
       display: inline-block;
     }
   }
-}
-.modal.show .modal-dialog {
-  -webkit-transform: translate(0,30%);
-  transform: translate(0,30%);
 }
 
 code {

@@ -10,106 +10,64 @@ Once downloaded, unzip the compressed folder and you’ll see something like thi
 
 ```markdown
 |-- Vue White Dashboard
-    |-- .babelrc  
-    |-- .env
-    |-- .eslintrc
-    |-- .gitattributes
-    |-- .gitignore
-    |-- CHANGELOG.md
-    |-- CONTRIBUTING.md
-    |-- LICENSE.md
-    |-- README.md
-    |-- package.json
-    |-- vue.config.js
-    |-- src
-        |-- App.vue
-        |-- i18n.js
-        |-- main.js
-        |-- assets
-        |   |-- css
-        |   |   |-- nucleo-icons.css
-        |   |-- demo
-        |   |   |-- demo.css
-        |   |-- fonts
-        |   |   |-- nucleo.eot
-        |   |   |-- nucleo.ttf
-        |   |   |-- nucleo.woff
-        |   |   |-- nucleo.woff2
-        |   |-- sass
-        |       |-- black-dashboard.scss
-        |       |-- black-dashboard
-        |           |-- bootstrap
-        |           |-- custom
-        |           |-- plugins
-        |-- components
-        |   |-- BaseAlert.vue
-        |   |-- BaseButton.vue
-        |   |-- BaseCheckbox.vue
-        |   |-- BaseDropdown.vue
-        |   |-- BaseNav.vue
-        |   |-- BaseTable.vue
-        |   |-- CloseButton.vue
-        |   |-- Modal.vue
-        |   |-- NavbarToggleButton.vue
-        |   |-- index.js
-        |   |-- Cards
-        |   |   |-- Card.vue
-        |   |   |-- StatsCard.vue
-        |   |-- Charts
-        |   |   |-- BarChart.js
-        |   |   |-- LineChart.js
-        |   |   |-- config.js
-        |   |   |-- utils.js
-        |   |-- Inputs
-        |   |   |-- BaseInput.vue
-        |   |-- NotificationPlugin
-        |   |   |-- Notification.vue
-        |   |   |-- Notifications.vue
-        |   |   |-- index.js
-        |   |-- SidebarPlugin
-        |       |-- SideBar.vue
-        |       |-- SidebarLink.vue
-        |       |-- index.js
-        |-- directives
-        |   |-- click-ouside.js
-        |-- layout
-        |   |-- dashboard
-        |       |-- Content.vue
-        |       |-- ContentFooter.vue
-        |       |-- DashboardLayout.vue
-        |       |-- MobileMenu.vue
-        |       |-- SidebarSharePlugin.vue
-        |       |-- TopNavbar.vue
-        |-- locales
-        |   |-- ar.json
-        |   |-- en.json
-        |-- pages
-        |   |-- Dashboard.vue
-        |   |-- Icons.vue
-        |   |-- Maps.vue
-        |   |-- NotFoundPage.vue
-        |   |-- Notifications.vue
-        |   |-- Profile.vue
-        |   |-- TableList.vue
-        |   |-- Typography.vue
-        |   |-- Dashboard
-        |   |   |-- TaskList.vue
-        |   |   |-- UserTable.vue
-        |   |-- Notifications
-        |   |   |-- NotificationTemplate.vue
-        |   |-- Profile
-        |       |-- EditProfileForm.vue
-        |       |-- UserCard.vue
-        |-- plugins
-        |   |-- RTLPlugin.js
-        |   |-- blackDashboard.js
-        |   |-- globalComponents.js
-        |   |-- globalDirectives.js
-        |   |-- liveDemo.js
-        |-- router
-            |-- index.js
-            |-- routes.js
-
+    ├── CHANGELOG.md
+    ├── README.md
+    ├── babel.config.js
+    ├── package.json
+    ├── postcss.config.js
+    ├── public
+    └── src
+    ├── App.vue
+    ├── RTLPlugin.js
+    ├── assets
+    │   ├── css
+    │   ├── demo
+    │   ├── fonts
+    │   ├── img
+    │   └── scss
+    │       ├── white-dashboard
+    │       │   ├── bootstrap
+    │       │   ├── custom
+    │       │   └── plugins
+    │       └── white-dashboard.scss
+    ├── components
+    │   ├── BaseAlert.vue
+    │   ├── BaseButton.vue
+    │   ├── BaseCheckbox.vue
+    │   ├── BaseNav.vue
+    │   ├── BaseRadio.vue
+    │   ├── BaseTable.vue
+    │   ├── Cards
+    │   ├── Charts
+    │   ├── CloseButton.vue
+    │   ├── Dropdown.vue
+    │   ├── HelloWorld.vue
+    │   ├── Inputs
+    │   ├── Modal.vue
+    │   ├── NavbarToggleButton.vue
+    │   ├── NotificationPlugin
+    │   ├── SidebarPlugin
+    │   └── index.js
+    ├── config.js
+    ├── globalComponents.js
+    ├── globalDirectives.js
+    ├── i18n.js
+    ├── locales
+    ├── main.js
+    ├── pages
+    │   ├── Dashboard
+    │   ├── Dashboard.vue
+    │   ├── Icons.vue
+    │   ├── Layout
+    │   ├── Maps.vue
+    │   ├── Notifications
+    │   ├── Notifications.vue
+    │   ├── Profile
+    │   ├── TableList.vue
+    │   ├── Typography.vue
+    │   ├── UpgradeToPRO.vue
+    │   └── UserProfile.vue
+    └── router.js
 ```
 
 #### Bootstrap components
@@ -120,28 +78,28 @@ Here is the list of Bootstrap 4 components that were restyled in Argon:
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Alerts</h6>
+        <h6 class="mb-0 ">Alerts</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Badge</h6>
+        <h6 class="mb-0 ">Badge</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Buttons</h6>
+        <h6 class="mb-0 ">Buttons</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Carousel</h6>
+        <h6 class="mb-0 ">Carousel</h6>
       </div>
     </div>
   </div>
@@ -151,28 +109,28 @@ Here is the list of Bootstrap 4 components that were restyled in Argon:
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Dropdowns</h6>
+        <h6 class="mb-0 ">Dropdowns</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Forms</h6>
+        <h6 class="mb-0 ">Forms</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Modal</h6>
+        <h6 class="mb-0 ">Modal</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Navs</h6>
+        <h6 class="mb-0 ">Navs</h6>
       </div>
     </div>
   </div>
@@ -186,28 +144,28 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
     <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Sidebar</h6>
+        <h6 class="mb-0 ">Sidebar</h6>
       </div>
     </div>
     </div>
     <div class="col-md-3">
         <div class="card shadow-sm">
           <div class="p-4 text-center">
-            <h6 class="mb-0 text-white">Custom Inputs</h6>
+            <h6 class="mb-0 ">Custom Inputs</h6>
           </div>
         </div>
       </div>
     <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Checkboxes</h6>
+        <h6 class="mb-0 ">Checkboxes</h6>
       </div>
     </div>
     </div>
     <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Notifications</h6>
+        <h6 class="mb-0 ">Notifications</h6>
       </div>
     </div>
     </div>
@@ -217,28 +175,28 @@ Besides giving the existing Bootstrap elements a new look, we added new ones, so
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Charts</h6>
+        <h6 class="mb-0 ">Charts</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Font Awesome</h6>
+        <h6 class="mb-0 ">Font Awesome</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Nucleo icons</h6>
+        <h6 class="mb-0 ">Nucleo icons</h6>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <div class="card shadow-sm">
       <div class="p-4 text-center">
-        <h6 class="mb-0 text-white">Cards</h6>
+        <h6 class="mb-0 ">Cards</h6>
       </div>
     </div>
   </div>
