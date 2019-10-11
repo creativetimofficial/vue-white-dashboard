@@ -34,12 +34,12 @@
                           title="Vue White Dashboard - Free Bootstrap Admin Template for Vue.js"
                           hashtags="vuejs, dashboard, bootstrap" twitter-user="creativetim">
             <div>
-              <network network="twitter" class="btn btn-round btn-info sharrre">
+              <base-button network="twitter" class="btn btn-round btn-info sharrre">
                 <i class="fab fa-twitter"></i>
-              </network>
-              <network network="facebook" class="btn btn-round btn-info sharrre">
+              </base-button>
+              <base-button network="facebook" class="btn btn-round btn-info sharrre">
                 <i class="fab fa-facebook"></i>
-              </network>
+              </base-button>
             </div>
           </social-sharing>
         </li>
