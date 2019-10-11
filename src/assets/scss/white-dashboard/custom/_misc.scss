@@ -86,11 +86,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   }
 
   .blockquote, .blockquote p, .card p{
-    color: rgba($white,0.8);
-  }
-  .bd-example {
-    background: linear-gradient(#1e1e2f,#1e1e24);
-
+    color: $black;
   }
 
   .navbar {
@@ -111,7 +107,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     }
 
     .tim-icons{
-      color: $white;
+      color: $black;
     }
 
     .popover .popover-header {
@@ -130,14 +126,10 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     }
   }
 
-  .card.card-body,
-  .card .card-body {
-    color: hsla(0,0%,100%,.8);
-  }
 
   label,
   .form-check {
-    color: hsla(0,0%,100%,.8);
+    color: $black;
   }
 
   .form-check + .btn {
@@ -147,12 +139,12 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .bd-example,
   table {
     thead th {
-      color: hsla(0,0%,100%,.8);
+      color: $black;
     }
 
     h1, h2, h3, h4, h5, h6,
     .h1, .h2, .h3, .h4, .h5, .h6 {
-      color: hsla(0,0%,100%,.8);
+      color: $black;
     }
 
     .datepicker{
