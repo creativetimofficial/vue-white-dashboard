@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy":"npm run build && cd docs && npm run build && cd .. && sudo gh-pages -d dist"
+    "deploy": "npm run build && cd docs && npm run build && cd .. && sudo gh-pages -d dist"
   },
   "dependencies": {
     "chart.js": "^2.8.0",
@@ -30,6 +30,8 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8",
     "node-sass": "^4.9.0",
     "prettier": "^1.18.2",
     "sass-loader": "^7.1.0",
