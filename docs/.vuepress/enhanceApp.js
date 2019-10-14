@@ -28,7 +28,7 @@ export default ({
     Vue.component(component.name || name, component)
   }
   let allComponents = Object.values(Components);
-  allComponents = allComponents.concat([LineChart, BarChart, Notification]);
+  allComponents = allComponents.concat([LineChart, BarChart, Notifications]);
   Vue.prototype.$docs = allComponents;
   let docComponents = getElements(componentEntries);
   siteData.themeConfig.sidebar = siteData.themeConfig.sidebar.concat(docComponents);

@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy":"npm run build && cd docs && npm run build && cd .. && sudo gh-pages -d dist"
   },
   "dependencies": {
     "chart.js": "^2.8.0",
