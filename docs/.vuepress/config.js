@@ -30,6 +30,7 @@ module.exports = {
     ['link', { rel: "icon", href: "/favicon.ico"}],
     ['link', { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" }],
     ['link', { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.0.6/css/all.css" }],
+    ['link', { rel: 'canonical', href: "https://www.creative-tim.com/product/vue-white-dashboard" }]
   ],
   themeConfig: {
     searchMaxSuggestions: 10,
