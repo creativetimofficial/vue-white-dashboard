@@ -44,19 +44,19 @@ Provide contextual feedback messages for typical user actions with the handful o
  <base-alert type="primary" dismissible>
          <strong>Primary!</strong> This is a primary alert—check it out!
      </base-alert>
- 
+
      <base-alert type="info" dismissible>
          <strong>Info!</strong> This is a info alert—check it out!
      </base-alert>
- 
+
      <base-alert type="success" dismissible>
          <strong>Success!</strong> This is a success alert—check it out!
      </base-alert>
- 
+
      <base-alert type="danger" dismissible>
          <strong>Danger!</strong> This is a danger alert—check it out!
      </div>
- 
+
      <base-alert type="warning" dismissible>
          <strong>Warning!</strong> This is a warning alert—check it out!
      </base-alert>

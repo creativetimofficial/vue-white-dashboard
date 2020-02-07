@@ -2,13 +2,19 @@ const markdownParser = require('./markdownParser')
 const path = require('path');
 
 module.exports = {
+  plugins: [
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }]
+  ],
   base: '/vue-white-dashboard/documentation/',
   markdown: {
     config: markdownParser
   },
   configureWebpack: (config, isServer) => {
     config.resolve.alias['@'] = path.resolve(__dirname, '../../src')
-    config.resolve.alias['assets'] = path.resolve(__dirname, '../../src/assets')
+    config.resolve.alias['assets'] = path.resolve(__dirname, '../../src/assets'),
+    config.resolve.alias['@theme'] = path.resolve(__dirname, '../node_modules/@vuepress/theme-default')
   },
   chainWebpack: config => {
     config.module
@@ -26,6 +32,7 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.0.6/css/all.css" }],
   ],
   themeConfig: {
+    searchMaxSuggestions: 10,
     sidebarDepth: 1,
 
     sidebar: [
