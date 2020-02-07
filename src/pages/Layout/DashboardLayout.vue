@@ -76,6 +76,15 @@
           <p>دعم RTL</p>
         </template>
       </sidebar-link>
+      <sidebar-link to="/upgradeToPro">
+        <i class="tim-icons icon-spaceship"></i>
+        <template v-if="!isRTL">
+          <p>Upgrade to PRO</p>
+        </template>
+        <template v-else>
+          <p>التطور للاحترافية</p>
+        </template>
+      </sidebar-link>
     </side-bar>
     <sidebar-share :background-color.sync="backgroundColor"></sidebar-share>
 

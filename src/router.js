@@ -49,6 +49,11 @@ const routes = [{
       path: "typography",
       name: "Typography",
       component: Typography
+    },
+    {
+      path: "upgradeToPro",
+      name: "Upgrade to PRO",
+      component: UpgradeToPRO
     }
   ]
 
