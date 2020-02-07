@@ -26,6 +26,9 @@
       <div class="navbar-nav-scroll ml-md-auto ">
         <ul class="navbar-nav bd-navbar-nav flex-row">
           <li class="nav-item">
+            <a target="_blank" href="https://www.creative-tim.com/product/vue-white-dashboard-pro?ref=vwd-upgrade-pro" class="btn btn-round btn-primary"><i class="tim-icons icon-send mr-2"></i>Upgrade to PRO</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank">
               <i class="fab fa-facebook-square"></i>
             </a>
