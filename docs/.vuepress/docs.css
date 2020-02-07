@@ -1700,3 +1700,7 @@ body.creativetim .partner.mdbootstrap, body.mdbootstrap .partner.creativetim, bo
 .popover-undefined {
   z-index: 1
 }
+
+.page .theme-default-content:not(.custom){
+  margin: 70px 20px 0;
+}
