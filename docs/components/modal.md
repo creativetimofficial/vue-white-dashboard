@@ -6,7 +6,27 @@ Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightb
 
 #### Example
 
-:::demo
+
+<div class="demo-block bd-example demo-box demo-components">
+  <div>
+      <base-button type="primary" @click="modals.modal0 = true">
+        Launch demo modal
+      </base-button>
+     <modal :show.sync="modals.modal0">
+       <template slot="header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+       </template>
+       <div>
+        ...
+       </div>
+       <template slot="footer">
+           <base-button type="secondary" @click="modals.modal0 = false">Close</base-button>
+           <base-button type="primary">Save changes</base-button>
+       </template>
+     </modal>
+  </div>
+</div>
+
 ```html
 <div>
     <base-button type="primary" @click="modals.modal0 = true">
@@ -27,11 +47,93 @@ Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightb
 
 </div>
 ```
-:::
+
 
 #### Variations
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <div class="row">
+    <div class="col-md-4">
+      <base-button block type="primary" class=" mb-3" @click="modals.modal1 = true">
+          Default
+      </base-button>
+      <modal :show.sync="modals.modal1">
+        <template slot="header">
+           <h5 class="modal-title" id="exampleModalLabel">Type your modal title</h5>
+        </template>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and
+            Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+            right at the coast of the Semantics, a large language ocean.</p>
+        <p>A small river named Duden flows by their place and supplies it with the necessary
+            regelialia. It is a paradisematic country, in which roasted parts of sentences
+            fly into your mouth.</p>
+        <template slot="footer">
+            <base-button type="primary">Save changes</base-button>
+            <base-button type="secondary" @click="modals.modal1 = false">Close</base-button>
+        </template>
+      </modal>
+    </div>
+  </div>
+</div>
+
+<div class="demo-block bd-example demo-box demo-components">
+  <div class="row">
+    <div class="col-md-4">
+      <base-button block type="default" class=" mb-3" @click="modals.modal3 = true">
+          Form
+      </base-button>
+      <modal :show.sync="modals.modal3"
+             body-classes="p-0"
+             modal-classes="modal-dialog-centered modal-sm">
+         <card type="secondary"
+               header-classes="bg-white pb-5"
+               body-classes="px-lg-5 py-lg-5"
+               class="border-0 mb-0">
+            <template>
+              <div class="text-muted text-center mb-3">
+                  <small>Sign in with</small>
+              </div>
+              <div class="btn-wrapper text-center">
+                  <base-button type="default">
+                    <img slot="icon" src="https://demos.creative-tim.com/argon-design-system/assets/img/icons/common/github.svg">
+                    Github
+                  </base-button>
+                  <base-button type="danger">
+                      <img slot="icon" src="https://demos.creative-tim.com/argon-design-system/assets/img/icons/common/google.svg">
+                      Google
+                  </base-button>
+              </div>
+            </template>
+            <template>
+              <div class="text-center text-muted mb-4">
+                  <small>Or sign in with credentials</small>
+              </div>
+              <form role="form">
+                <base-input alternative
+                            class="mb-3"
+                            placeholder="Email"
+                            addon-left-icon="tim-icons icon-single-02">
+                </base-input>
+                <base-input alternative
+                            type="password"
+                            placeholder="Password"
+                            addon-left-icon="tim-icons icon-lock-circle">
+                </base-input>
+                <base-checkbox>
+                    Remember me
+                </base-checkbox>
+                <div class="text-center">
+                    <base-button type="primary" class="my-4">Sign In</base-button>
+                </div>
+              </form>
+            </template>
+         </card>
+      </modal>
+    </div>
+  </div>
+</div>
+
+
 ```html
 <div class="row">
     <div class="col-md-4">
@@ -111,7 +213,7 @@ Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightb
     </div>
 </div>
 ```
-:::
+
 
 
 <script>
