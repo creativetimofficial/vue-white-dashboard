@@ -8,8 +8,7 @@ Indicate the current page's location within a navigational hierarchy that automa
 
 Separators are automatically added in CSS through ::before and content .
 
-:::demo
-```html
+<div class="demo-block bd-example demo-box demo-components demo-breadcrumb.html">
 <nav aria-label="breadcrumb" role="navigation">
   <ol class="breadcrumb">
     <li class="breadcrumb-item active" aria-current="page">Home</li>
@@ -30,5 +29,5 @@ Separators are automatically added in CSS through ::before and content .
     <li class="breadcrumb-item active" aria-current="page">Data</li>
   </ol>
 </nav>
-```
-:::
+
+</div>
