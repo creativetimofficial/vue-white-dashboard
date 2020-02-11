@@ -1,11 +1,22 @@
 # Plugin Chart.js
 
-We used [Vue Chart.js](https://vue-chartjs.org/#/) along with Chart.js library and created some re-usable components 
+We used [Vue Chart.js](https://vue-chartjs.org/#/) along with Chart.js library and created some re-usable components
 on top of it so you can easily use in your project.
 
 #### Line Chart component
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <div>
+    <line-chart style="height: 100%"
+                :chart-data="purpleLineChart.chartData"
+                :gradient-color="purpleLineChart.gradientColors"
+                :gradient-stops="purpleLineChart.gradientStops"
+                :extra-options="purpleLineChart.extraOptions">
+    </line-chart>
+  </div>
+</div>
+
+
 ```html
 <div>
   <line-chart style="height: 100%"
@@ -52,7 +63,7 @@ export default {
                 fontColor: "#ff8a76"
               }
             }],
-        
+
             xAxes: [{
               barPercentage: 1.6,
               gridLines: {
@@ -66,7 +77,7 @@ export default {
               }
             }]
           }
-        
+
 
         },
         chartData: {
@@ -95,11 +106,22 @@ export default {
 </script>
 
 ```
-:::
+
 
 #### Bar Chart component
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <div>
+    <bar-chart style="height: 100%"
+               :chart-data="blueBarChart.chartData"
+               :gradient-color="blueBarChart.gradientColors"
+               :gradient-stops="blueBarChart.gradientStops"
+               :extra-options="blueBarChart.extraOptions">
+    </bar-chart>
+  </div>
+</div>
+
+
 ```html
 <div>
   <bar-chart style="height: 100%"
@@ -133,7 +155,7 @@ export default {
           },
           scales: {
             yAxes: [{
-        
+
               gridLines: {
                 drawBorder: false,
                 color: 'rgba(29,140,248,0.1)',
@@ -147,7 +169,7 @@ export default {
               }
             }],
             xAxes: [{
-        
+
               gridLines: {
                 drawBorder: false,
                 color: 'rgba(29,140,248,0.1)',
@@ -181,7 +203,7 @@ export default {
 </script>
 
 ```
-:::
+
 
 For more examples check out our `Dashboard.vue` component from the demo archive.
 You will find more chart examples there including a chart with updating data.
@@ -218,7 +240,7 @@ export default {
           },
           scales: {
             yAxes: [{
-        
+
               gridLines: {
                 drawBorder: false,
                 color: 'rgba(29,140,248,0.1)',
@@ -232,7 +254,7 @@ export default {
               }
             }],
             xAxes: [{
-        
+
               gridLines: {
                 drawBorder: false,
                 color: 'rgba(29,140,248,0.1)',
@@ -292,7 +314,7 @@ export default {
                 fontColor: "#ff8a76"
               }
             }],
-        
+
             xAxes: [{
               barPercentage: 1.6,
               gridLines: {
@@ -306,7 +328,7 @@ export default {
               }
             }]
           }
-        
+
 
         },
         chartData: {
