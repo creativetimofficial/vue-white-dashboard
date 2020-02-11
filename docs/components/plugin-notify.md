@@ -17,7 +17,18 @@ You can trigger notifications both from template and javascript via `$notify` or
 
 ##### Example
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+<div>
+  <base-button @click="$notify('Simple notification')">Simple</base-button>
+  <base-button @click="$notify({type: 'primary', message: 'Primary Notification'})">Primary</base-button>
+  <base-button @click="$notify({type: 'info', message: 'Info Notification'})">Info</base-button>
+  <base-button @click="$notify({type: 'success', message: 'Success Notification'})">Success</base-button>
+  <base-button @click="$notify({type: 'warning', message: 'Warning Notification'})">Warning</base-button>
+  <base-button @click="$notify({type: 'danger', message: 'Danger Notification'})">Danger</base-button>
+</div>
+</div>
+
+
 ```html
 <div>
   <base-button @click="$notify('Simple notification')">Simple</base-button>
@@ -28,11 +39,22 @@ You can trigger notifications both from template and javascript via `$notify` or
   <base-button @click="$notify({type: 'danger', message: 'Danger Notification'})">Danger</base-button>
 </div>
 ```
-:::
 
 #### Notification position
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+<div>
+  <base-button @click="notifyTopLeft">Top left</base-button>
+  <base-button @click="notifyTopCenter">Top center</base-button>
+  <base-button @click="notifyTopRight">Top right</base-button>
+
+  <base-button @click="notifyBottomLeft">Bottom left</base-button>
+  <base-button @click="notifyBottomCenter">Bottom center</base-button>
+  <base-button @click="notifyBottomRight">Bottom right</base-button>
+</div>
+</div>
+
+
 ```html
 <div>
   <base-button @click="notifyTopLeft">Top left</base-button>
@@ -70,7 +92,7 @@ export default {
 </script>
 
 ```
-:::
+
 
 <script>
 export default {
