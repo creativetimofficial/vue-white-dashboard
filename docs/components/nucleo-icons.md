@@ -4,8 +4,10 @@
 <p>Through most of the examples in this kit, we have used 100 Nucleo Icons for the White Dashboard. If you want more than 2100 icons please check the official
 <a href="https://nucleoapp.com/?ref=1712">Nucleo Icons Pack</a>.</p>
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <i class="tim-icons icon-single-02"></i>
+</div>
+
 ```html
 <i class="tim-icons icon-single-02"></i>
 ```
-:::
