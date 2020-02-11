@@ -15,7 +15,27 @@ Keep reading for documentation on required classes, form layout, and more.
 
 #### Form controls
 
-:::demo
+
+<div class="demo-block bd-example demo-box demo-components">
+  <form @submit.prevent>
+    <base-input label="Email address"
+                type="email"
+                placeholder="Enter email">
+        <small slot="helperText" id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </base-input>
+    <base-input label="Password"
+                type="password"
+                placeholder="Password">
+    </base-input>
+    <base-checkbox>
+      Option one is this
+   </base-checkbox>
+
+   <base-button native-type="submit" type="primary">Submit</base-button>
+  </form>
+</div>
+
+
 ```html
 <card>
     <form @submit.prevent>
@@ -36,7 +56,6 @@ Keep reading for documentation on required classes, form layout, and more.
     </form>
 </card>
 ```
-:::
 
 #### Form controls
 
@@ -47,7 +66,38 @@ Be sure to explore our custom forms to further style `<select>`s.
 You can use the `base-input` component and the default slot which will act like a div with
 `form-group` class.
 
-:::demo
+
+<div class="demo-block bd-example demo-box demo-components">
+  <form @submit.prevent>
+    <base-input label="Email address"
+                type="email"
+                placeholder="Enter email">
+    </base-input>
+    <base-input label="Example select">
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </base-input>
+    <base-input label="Example multiple select">
+      <select multiple class="form-control" id="exampleFormControlSelect2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </base-input>
+    <base-input label="Example textarea">
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </base-input>
+  </form>
+</div>
+
+
 ```html
 <card>
     <form @submit.prevent>
@@ -79,49 +129,85 @@ You can use the `base-input` component and the default slot which will act like 
     </form>
 </card>
 ```
-:::
+
 
 #### Examples
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <base-input class="has-success" value="Success">
+  </base-input>
+</div>
+
+
 ```html
 <card>
   <base-input class="has-success" value="Success">
   </base-input>
 </card>
 ```
-:::
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">  
+  <base-input class="has-danger" value="Error">
+  </base-input>
+</div>
+
 ```html
 <card>
   <base-input class="has-danger" value="Error">
   </base-input>
 </card>
 ```
-:::
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <base-input addon-left-icon="tim-icons icon-single-02" placeholder="With nucleo icon">
+  </base-input>
+</div>
+
 ```html
 <card>
   <base-input addon-left-icon="tim-icons icon-single-02" placeholder="With nucleo icon">
   </base-input>
 </card>
 ```
-:::
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <base-input addon-left-icon="fab fa-dribbble" placeholder="With font awesome icon">
+  </base-input>
+</div>
+
 ```html
 <card>
   <base-input addon-left-icon="fab fa-dribbble" placeholder="With font awesome icon">
   </base-input>
 </card>
 ```
-:::
+
 
 #### Checkboxes and radios
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <div>
+     <base-checkbox class="mb-3" v-model="checkboxes.unchecked">
+        Unchecked
+    </base-checkbox>
+  </div>
+  <div>
+    <base-checkbox class="mb-3" v-model="checkboxes.checked">
+        Checked
+    </base-checkbox>
+  </div>
+  <div>
+    <base-checkbox class="mb-3" v-model="checkboxes.uncheckedDisabled" disabled>
+        Unchecked
+    </base-checkbox>
+  </div>
+  <div>
+    <base-checkbox class="mb-3" v-model="checkboxes.checkedDisabled" disabled>
+        Checked
+    </base-checkbox>
+  </div>
+</div>
+
 ```html
 <template>
 <div>
@@ -155,12 +241,34 @@ export default {
 }
 </script>
 ```
-:::
+
 
 
 #### Radio buttons
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <div>
+      <base-radio name="radio0" class="mb-3" v-model="radio.radio1">
+          Unchecked
+      </base-radio>
+  </div>
+  <div>
+      <base-radio name="radio1" class="mb-3" v-model="radio.radio1">
+          Checked
+      </base-radio>
+  </div>
+  <div>
+      <base-radio name="radio2" class="mb-3" v-model="radio.radio2" disabled>
+          Disabled unchecked
+      </base-radio>
+  </div>
+  <div>
+      <base-radio name="radio3" class="mb-3" v-model="radio.radio2" disabled>
+          Disabled checked
+      </base-radio>
+  </div>
+</div>
+
 ```html
 <template>
 <div>
@@ -195,11 +303,21 @@ export default {
 }
 </script>
 ```
-:::
+
 
 #### Inline
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+<div>
+   <base-checkbox inline class="mb-3" v-model="checkboxes.unchecked">
+      Unchecked
+  </base-checkbox>
+  <base-checkbox inline class="mb-3" v-model="checkboxes.checked">
+      Checked
+  </base-checkbox>
+</div>
+</div>
+
 ```html
 <template>
 <div>
@@ -224,9 +342,21 @@ export default {
 }
 </script>
 ```
-:::
 
-:::demo
+
+<div class="demo-block bd-example demo-box demo-components">
+  <div>
+      <base-radio inline name="radio0" class="mb-3" v-model="radio.radio0">
+          Unchecked
+      </base-radio>
+  </div>
+  <div>
+      <base-radio inline name="radio1" class="mb-3" v-model="radio.radio0">
+          Unchecked
+      </base-radio>
+  </div>
+</div>
+
 ```html
 <template>
 <div>
@@ -252,7 +382,7 @@ export default {
 }
 </script>
 ```
-:::
+
 
 #### Layout
 
@@ -263,7 +393,21 @@ Additional classes can be used to vary this layout on a per-form basis.
 
 More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <card>
+    <form>
+        <div class="row">
+          <div class="col">
+            <base-input type="text" placeholder="First name"/>
+          </div>
+          <div class="col">
+            <base-input type="text" placeholder="Last name"/>
+          </div>
+        </div>
+      </form>
+  </card>
+</div>
+
 ```html
 <card>
   <form>
@@ -278,13 +422,28 @@ More complex forms can be built using our grid classes. Use these for form layou
     </form>
 </card>
 ```
-:::
+
 
 #### Form row
 
 You may also swap .row for .form-row, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <card>
+    <form>
+        <div class="form-row">
+          <div class="col">
+            <base-input type="text" placeholder="First name"/>
+          </div>
+          <div class="col">
+            <base-input type="text" placeholder="Last name"/>
+          </div>
+        </div>
+      </form>
+  </card>
+</div>
+
+
 ```html
 <card>
   <form>
@@ -299,12 +458,39 @@ You may also swap .row for .form-row, a variation of our standard grid row that 
     </form>
 </card>
 ```
-:::
+
 
 
 More complex layouts can also be created with the grid system.
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <card>
+    <form>
+        <div class="form-row">
+            <base-input class="col-md-6" type="email" label="Email" placeholder="Email"/>
+            <base-input class="col-md-6" type="password" label="Password" placeholder="Password"/>
+        </div>
+        <base-input type="text" label="Address" placeholder="1234 Main St"/>
+        <base-input type="text" label="Address 2" placeholder="Apartment, studio, or floor"/>
+        <div class="form-row">
+            <base-input class="col-md-6" label="City" placeholder="City"/>
+            <base-input class="col-md-4" label="State">
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+            </base-input>
+            <base-input class="col-md-2" label="Zip" placeholder="Zip"/>
+        </div>
+        <base-input>
+          <base-checkbox>Check me out</base-checkbox>
+        </base-input>
+        <base-button type="primary" native-type="Submit">Sign in</base-button>
+      </form>
+  </card>
+</div>
+
+
 ```html
 <card>
   <form>
@@ -331,13 +517,30 @@ More complex layouts can also be created with the grid system.
     </form>
 </card>
 ```
-:::
+
 
 #### Disabled forms
 
 Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
 
-:::demo
+<div class="demo-block bd-example demo-box demo-components">
+  <card>
+    <form @submit.prevent>
+        <fieldset disabled>
+          <base-input label="Disabled input" placeholder="Disabled input"></base-input>
+          <base-input label="Disabled select">
+            <select id="disabledSelect" class="form-control">
+              <option>Disabled select</option>
+            </select>
+          </base-input>
+          <base-checkbox>Can't check me out</base-checkbox>
+          <base-button type="primary" native-type="submit">Submit</base-button>
+        </fieldset>  
+    </form>
+  </card>
+</div>
+
+
 ```html
 <card>
   <form @submit.prevent>
@@ -354,10 +557,10 @@ Add the `disabled` boolean attribute on an input to prevent user interactions an
   </form>
 </card>
 ```
-:::
 
 
-::: warning
+
+
 
 #### Caveat with anchors
 
@@ -372,9 +575,7 @@ By default, browsers will treat all native form controls
  and won’t prevent keyboard users from being able to focus or activate these links.
  So to be safe, use custom JavaScript to disable such links.
 
-:::
 
-::: tip
 
 #### Cross browser compatibility
 
@@ -382,7 +583,6 @@ While Bootstrap will apply these styles in all browsers,
 Internet Explorer 11 and below don’t fully support the disabled
 attribute on a `<fieldset>`. Use custom JavaScript to disable the fieldset in these browsers.
 
-:::
 
 <script>
 export default {
