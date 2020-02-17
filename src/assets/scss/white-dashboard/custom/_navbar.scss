@@ -403,6 +403,16 @@
 
 }
 
+@media (min-width: 719px){
+  .navbar-nav{
+    .nav-item > a:not(.external):hover,
+    .nav-item > a:not(.external).router-link-active{
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
+
 @media screen and (min-width: 992px) {
   .navbar-collapse {
     background: none !important;
