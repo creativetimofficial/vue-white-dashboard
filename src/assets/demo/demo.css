@@ -49,13 +49,17 @@
   z-index: 1;
 }
 
-@media all and (min-width: 992px) {
-  .sidebar .nav>li.active-pro {
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-  }
+.sidebar .nav>li.active-pro {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  background: rgba(0,0,0,0.06);
 }
+
+.sidebar .nav>li.active-pro .nav-link {
+  margin-top: 0;
+}
+
 
 .card.card-upgrade .card-category {
   max-width: 530px;
