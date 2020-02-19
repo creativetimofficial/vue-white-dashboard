@@ -66,3 +66,32 @@
   max-width: 530px;
   margin: 0 auto;
 }
+
+
+/* Vuepress style */
+
+.custom-page .theme-default-content:not(.custom){
+  max-width: unset;
+}
+
+.bd-docs{
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.bd-docs h1,
+.bd-docs h2,
+.bd-docs h3,
+.bd-docs h4,
+.bd-docs h5,
+.bd-docs h6{
+  font-weight: 400;
+}
+
+.bd-docs .sidebar{
+  top: 0;
+  width: 230px;
+  margin-top: 80px;
+  margin-left: 20px;
+}
