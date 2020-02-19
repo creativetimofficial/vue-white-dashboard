@@ -2,7 +2,7 @@
     <base-nav class="main-nav flex-row align-items-md-center" type="" effect="light" expand>
         <a slot="brand" class="navbar-brand mr-0 mr-md-2" href="/"
            aria-label="Bootstrap">
-            Vue White Dashboard <span class="ml-3">v 1.0.0</span>
+            Vue White Dashboard <span class="ml-3">v 1.0.1</span>
         </a>
 
 
