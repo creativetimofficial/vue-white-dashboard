@@ -19,7 +19,7 @@ export default {
   components: {
     Notification
   },
-  props:{
+  props: {
     transitionName: {
       type: String,
       default: 'list'
@@ -27,10 +27,6 @@ export default {
     transitionMode: {
       type: String,
       default: 'in-out'
-    },
-    overlap: {
-      type: Boolean,
-      default: false
     }
   },
   data() {

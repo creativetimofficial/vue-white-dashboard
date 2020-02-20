@@ -141,6 +141,11 @@ export default{
       }
     }
   },
+  data() {
+    return {
+      elmHeight: 0
+    };
+  },
   mounted(){
     this.elmHeight = this.$el.clientHeight;
     if (this.timeout) {
