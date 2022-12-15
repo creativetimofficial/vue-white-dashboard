@@ -5,16 +5,21 @@
         <div class="card card-upgrade">
           <div class="card-header text-center border-bottom-0">
             <h4 class="card-title">Vue White Dashboard PRO</h4>
-              <p class="card-category">Are you looking for more components? Please check our Premium Version of Vue White Dashboard.</p>
+            <p class="card-category">
+              Are you looking for more components? Please check our Premium
+              Version of Vue White Dashboard.
+            </p>
           </div>
           <div class="card-body">
             <div class="table-responsive table-upgrade">
               <table class="table">
                 <thead>
-                  <tr><th></th>
-                  <th class="text-center">Free</th>
-                  <th class="text-center">PRO</th>
-                </tr></thead>
+                  <tr>
+                    <th></th>
+                    <th class="text-center">Free</th>
+                    <th class="text-center">PRO</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
                     <td>Elements</td>
@@ -33,13 +38,21 @@
                   </tr>
                   <tr>
                     <td>Mini Sidebar</td>
-                    <td class="text-center"><i class="ni ni-fat-remove text-danger"></i></td>
-                    <td class="text-center"><i class="ni ni-check-bold text-success"></i></td>
+                    <td class="text-center">
+                      <i class="ni ni-fat-remove text-danger"></i>
+                    </td>
+                    <td class="text-center">
+                      <i class="ni ni-check-bold text-success"></i>
+                    </td>
                   </tr>
                   <tr>
                     <td>Premium Support</td>
-                    <td class="text-center"><i class="ni ni-fat-remove text-danger"></i></td>
-                    <td class="text-center"><i class="ni ni-check-bold text-success"></i></td>
+                    <td class="text-center">
+                      <i class="ni ni-fat-remove text-danger"></i>
+                    </td>
+                    <td class="text-center">
+                      <i class="ni ni-check-bold text-success"></i>
+                    </td>
                   </tr>
                   <tr>
                     <td></td>
@@ -49,10 +62,17 @@
                   <tr>
                     <td class="text-center"></td>
                     <td class="text-center">
-                      <a href="#" class="btn btn-round btn-default disabled">Current Version</a>
+                      <a href="#" class="btn btn-round btn-default disabled"
+                        >Current Version</a
+                      >
                     </td>
                     <td class="text-center">
-                      <a target="_blank" href="https://www.creative-tim.com/product/vue-white-dashboard-pro?ref=vwd-upgrade-pro" class="btn btn-round btn-primary">Upgrade to PRO</a>
+                      <a
+                        target="_blank"
+                        href="https://www.creative-tim.com/product/vue-white-dashboard-pro?ref=vwd-upgrade-pro"
+                        class="btn btn-round btn-primary"
+                        >Upgrade to PRO</a
+                      >
                     </td>
                   </tr>
                 </tbody>
@@ -64,7 +84,5 @@
     </div>
   </div>
 </template>
-<script>
-</script>
-<style>
-</style>
+<script></script>
+<style></style>

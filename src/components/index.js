@@ -12,6 +12,7 @@ import CloseButton from "./CloseButton";
 import DropDown from "./Dropdown.vue";
 import Notifications from "./NotificationPlugin/index";
 
+// eslint-disable-next-line no-unused-vars
 let components = {
   Card,
   BaseInput,
@@ -25,10 +26,10 @@ let components = {
   Modal,
   CloseButton,
   DropDown,
-  Notifications
+  Notifications,
 };
 
-export{
+export {
   Card,
   BaseInput,
   SidebarPlugin,
@@ -41,5 +42,5 @@ export{
   Modal,
   CloseButton,
   DropDown,
-  Notifications
-}
+  Notifications,
+};

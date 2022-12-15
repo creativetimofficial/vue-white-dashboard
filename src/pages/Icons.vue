@@ -3,12 +3,22 @@
     <card>
       <template slot="header">
         <h5 class="title">100 Awesome Nucleo Icons</h5>
-        <p class="category">Handcrafted by our friends from <a href="https://nucleoapp.com/?ref=1712">NucleoApp</a></p>
+
+        <p class="category">
+          Handcrafted by our friends from
+          <a href="https://nucleoapp.com/?ref=1712">NucleoApp</a>
+        </p>
       </template>
+
       <div class="row">
-        <div v-for="icon in icons" class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+        <div
+          v-for="(icon, index) in icons"
+          class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6"
+          :key="index"
+        >
           <div class="font-icon-detail">
             <i class="tim-icons" :class="[`${icon}`]"></i>
+
             <p>{{ icon }}</p>
           </div>
         </div>
@@ -16,19 +26,16 @@
     </card>
   </div>
 </template>
+
 <script>
+import { Card } from "@/components/index";
 
-import {
-  Card
-} from "@/components/index";
-
-
-export default{
-  components:{
-    Card
+export default {
+  components: {
+    Card,
   },
-  data(){
-    return{
+  data() {
+    return {
       icons: [
         "icon-alert-circle-exc",
         "icon-align-center",
@@ -129,11 +136,11 @@ export default{
         "icon-button-pause",
         "icon-simple-remove",
         "icon-simple-add",
-        "icon-simple-delete"
+        "icon-simple-delete",
       ],
-    }
-  }
+    };
+  },
 };
 </script>
-<style>
-</style>
+
+<style></style>

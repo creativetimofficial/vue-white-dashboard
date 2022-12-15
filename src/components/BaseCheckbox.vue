@@ -1,56 +1,61 @@
 <template>
-  <div class="form-check"
-       :class="[{disabled: disabled}, inlineClass]">
+  <div class="form-check" :class="[{ disabled: disabled }, inlineClass]">
     <label :for="cbId" class="form-check-label">
-      <input :id="cbId"
-             class="form-check-input"
-             type="checkbox"
-             :disabled="disabled"
-             v-model="model"/>
+      <input
+        :id="cbId"
+        class="form-check-input"
+        type="checkbox"
+        :disabled="disabled"
+        v-model="model"
+      />
+
       <span class="form-check-sign"></span>
+
       <slot>
         <span v-if="inline">&nbsp;</span>
       </slot>
     </label>
   </div>
 </template>
+
 <script>
-  export default {
-    name: 'base-checkbox',
-    model:{
-      prop: "checked"
-    },
-    props:{
-      disabled: Boolean,
-      inline: Boolean,
-      checked: [Array, Boolean]
-    },
-    data(){
-      return {
-        cbId: '',
-        touched: false
-      }
-    },
-    computed:{
-      model:{
-        get(){
-          return this.checked
-        },
-        set(check){
-          if(!this.touched){
-            this.touched = true
-          }
-          this.$emit('input', check)
-        }
+export default {
+  name: "base-checkbox",
+  model: {
+    prop: "checked",
+  },
+  props: {
+    disabled: Boolean,
+    inline: Boolean,
+    checked: [Array, Boolean],
+  },
+  data() {
+    return {
+      cbId: "",
+      touched: false,
+    };
+  },
+  computed: {
+    model: {
+      get() {
+        return this.checked;
       },
-      inlineClass(){
-        if(this.inline){
-          return `form-check-inline`
+      set(check) {
+        if (!this.touched) {
+          this.touched = true;
         }
-      }
+        this.$emit("input", check);
+      },
     },
-    created(){
-      this.cbId = Math.random().toString(16).slice(2)
-    }
-  }
+    inlineClass() {
+      if (this.inline) {
+        return `form-check-inline`;
+      }
+      return 0;
+    },
+  },
+  created() {
+    this.cbId = Math.random().toString(16).slice(2);
+  },
+};
 </script>

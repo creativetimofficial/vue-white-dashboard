@@ -1,10 +1,20 @@
 <template>
-  <div v-if="visible" class="alert text-left" :class="[`alert-${type}`, {'alert-with-icon': withIcon }]" role="alert">
+  <div
+    v-if="visible"
+    class="alert text-left"
+    :class="[`alert-${type}`, { 'alert-with-icon': withIcon }]"
+    role="alert"
+  >
     <slot v-if="!dismissible"></slot>
     <div v-else class="container">
       <slot></slot>
       <slot name="dismiss-icon">
-        <button type="button" class="close" aria-label="Close" @click="dismissAlert">
+        <button
+          type="button"
+          class="close"
+          aria-label="Close"
+          @click="dismissAlert"
+        >
           <span aria-hidden="true">
             <i class="tim-icons icon-simple-remove"></i>
           </span>
@@ -14,37 +24,35 @@
   </div>
 </template>
 <script>
-  export default {
-    name:'base-alert',
-    props:{
-      type:{
-        type: String,
-        default: 'default',
-        description: "Alert type"
-
-      },
-      withIcon:{
-        type: Boolean,
-        default: false,
-        description: "Whether alert contains icon"
-      },
-      dismissible: {
-        type: Boolean,
-        default: false,
-        description: "Whether alert is dismissible (closeable)"
-      }
+export default {
+  name: "base-alert",
+  props: {
+    type: {
+      type: String,
+      default: "default",
+      description: "Alert type",
     },
-    data(){
-      return{
-        visible: true
-      }
+    withIcon: {
+      type: Boolean,
+      default: false,
+      description: "Whether alert contains icon",
     },
-    methods: {
-      dismissAlert(){
-        this.visible = false;
-      }
-    }
-  }
+    dismissible: {
+      type: Boolean,
+      default: false,
+      description: "Whether alert is dismissible (closeable)",
+    },
+  },
+  data() {
+    return {
+      visible: true,
+    };
+  },
+  methods: {
+    dismissAlert() {
+      this.visible = false;
+    },
+  },
+};
 </script>
-<style>
-</style>
+<style></style>

@@ -3,7 +3,5 @@
     <router-view></router-view>
   </transition>
 </template>
-<script>
-</script>
-<style>
-</style>
+<script></script>
+<style></style>

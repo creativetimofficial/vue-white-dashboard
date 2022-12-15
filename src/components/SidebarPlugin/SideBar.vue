@@ -1,72 +1,72 @@
 <template>
-  <div
-      class="sidebar"
-      :data="backgroundColor">
-      <div class="sidebar-wrapper text-left">
-        <div class="logo">
-          <a href="javascript:void(0)" class="simple-text logo-mini">
-            {{ abv }}
-          </a>
+  <div class="sidebar" :data="backgroundColor">
+    <div class="sidebar-wrapper text-left">
+      <div class="logo">
+        <a href="javascript:void(0)" class="simple-text logo-mini">
+          {{ abv }}
+        </a>
 
-          <a href="javascript:void(0)" class="simple-text logo-normal" :class="$rtl.isRTL ? '' : 'text-left'">
-            {{ title }}
-          </a>
-        </div>
-        <ul class="nav">
-          <slot>
-            <sidebar-link>
-            </sidebar-link>
-          </slot>
-        </ul>
+        <a
+          href="javascript:void(0)"
+          class="simple-text logo-normal"
+          :class="$rtl.isRTL ? '' : 'text-left'"
+        >
+          {{ title }}
+        </a>
       </div>
+      <ul class="nav">
+        <slot>
+          <sidebar-link> </sidebar-link>
+        </slot>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
 import SidebarLink from "./SidebarLink.vue";
 
-export default{
+export default {
   name: "side-bar",
   components: {
-    SidebarLink
+    SidebarLink,
   },
   props: {
     abv: {
       type: String,
-      default: "CT"
+      default: "CT",
     },
     title: {
       type: String,
-      default: "Creative Tim"
+      default: "Creative Tim",
     },
     backgroundColor: {
       type: String,
-      default: "green"
+      default: "green",
     },
-    sidebarLinks:{
+    sidebarLinks: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
-  data(){
-    return{
-      activeLinkIndex: 0
-    }
+  data() {
+    return {
+      activeLinkIndex: 0,
+    };
   },
-  computed:{
+  computed: {
     isRTL() {
       return this.$rtl.isRTL;
-    }
+    },
   },
-  methods:{
-    findActiveLink(){
+  methods: {
+    findActiveLink() {
       this.links.forEach((link, index) => {
-        if(link.isActive()){
+        if (link.isActive()) {
           this.activeLinkIndex = index;
         }
       });
-    }
-  }
-}
+    },
+  },
+};
 </script>
-<style>
-</style>
+<style></style>

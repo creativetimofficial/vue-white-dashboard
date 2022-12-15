@@ -4,8 +4,8 @@ import BaseRadio from "./components/BaseRadio.vue";
 import DropDown from "./components/Dropdown.vue";
 import Notify from "./components/NotificationPlugin";
 
-import '@/assets/scss/white-dashboard.scss';
-import '@/assets/css/nucleo-icons.css';
+import "@/assets/scss/white-dashboard.scss";
+import "@/assets/css/nucleo-icons.css";
 import "@/assets/demo/demo.css";
 
 /**
@@ -19,7 +19,7 @@ const GlobalComponents = {
     Vue.component("base-radio", BaseRadio);
     Vue.component("drop-down", DropDown);
     Vue.component("notify", Notify);
-  }
+  },
 };
 
 export default GlobalComponents;

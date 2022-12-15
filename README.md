@@ -1,8 +1,6 @@
 # [Vue White Dashboard](https://demos.creative-tim.com/vue-white-dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/share?url=https%3A%2F%2Fdemos.creative-tim.com%2Fvue-white-dashboard&text=Vue%20White%20Dashboard%20by%20Creative%20Tim&via=CreativeTim&hashtags=vuejs%20%23white%20%23dashboard)
 
-
- ![version](https://img.shields.io/badge/version-1.0.1-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/white-dashboard/issues.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-white-dashboard/issues/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vue-white-dashboard/issues.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-white-dashboard/issues/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
-
+![version](https://img.shields.io/badge/version-1.0.1-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/white-dashboard/issues.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-white-dashboard/issues/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vue-white-dashboard/issues.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-white-dashboard/issues/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
 ![Product Gif](https://github.com/creativetimofficial/vue-white-dashboard/blob/live-demo/src/assets/demo/product-gif.gif?raw=true)
 
@@ -15,30 +13,27 @@ We thought about everything, so this dashboard comes with 2 versions, Dark Mode 
 
 We are very excited to share this dashboard with you and we look forward to hearing your feedback!
 
-
 ## Table of Contents
 
-
-* [Versions](#versions)
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Reporting Issues](#reporting-issues)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
-
+- [Versions](#versions)
+- [Demo](#demo)
+- [Quick Start](#quick-start)
+- [Documentation](#documentation)
+- [File Structure](#file-structure)
+- [Browser Support](#browser-support)
+- [Resources](#resources)
+- [Reporting Issues](#reporting-issues)
+- [Licensing](#licensing)
+- [Useful Links](#useful-links)
 
 ## Versions
+
 [<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-white-dashboard)
 [<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/white-dashboard-laravel)
 
-
-| Vue | Laravel |
-| --- | --- |
-| [![Vue White Dashboard ](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/vue-white-dashboard.jpg?raw=true)](https://www.creative-tim.com/product/vue-white-dashboard)  | [![White Dashboard Laravel](https://github.com/creativetimofficial/public-assets/blob/master/white-dashboard-laravel/white-dashboard-laravel.jpg?raw=true)](https://www.creative-tim.com/product/white-dashboard-laravel)
+| Vue                                                                                                                                                                                                        | Laravel                                                                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Vue White Dashboard ](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/vue-white-dashboard.jpg?raw=true)](https://www.creative-tim.com/product/vue-white-dashboard) | [![White Dashboard Laravel](https://github.com/creativetimofficial/public-assets/blob/master/white-dashboard-laravel/white-dashboard-laravel.jpg?raw=true)](https://www.creative-tim.com/product/white-dashboard-laravel) |
 
 ## Demo
 
@@ -48,13 +43,13 @@ We are very excited to share this dashboard with you and we look forward to hear
 - [Maps Page](https://demos.creative-tim.com/vue-white-dashboard/#/maps)
 - [Notifications page](https://demos.creative-tim.com//vue-white-dashboard/#/notifications)
 
-| Start page | User profile page | Tables page  |
-| --- | --- | ---  |
-| [![Start page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/start-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard)  | [![User profile page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/profile-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/user)  | [![Tables pages](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/tables-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/table)
+| Start page                                                                                                                                                                        | User profile page                                                                                                                                                                                 | Tables page                                                                                                                                                                                  |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Start page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/start-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard) | [![User profile page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/profile-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/user) | [![Tables pages](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/tables-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/table) |
 
-| Maps page | Notifications page | RTL page  |
-| --- | --- | ---  |
-| [![Maps page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/maps-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/maps)  | [![Notifications page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/notifications-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/notifications)  | [![RTL page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/rtl-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/dashboard?enableRTL=true)  
+| Maps page                                                                                                                                                                              | Notifications page                                                                                                                                                                                                | RTL page                                                                                                                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Maps page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/maps-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/maps) | [![Notifications page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/notifications-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/notifications) | [![RTL page](https://github.com/creativetimofficial/public-assets/blob/master/vue-white-dashboard/rtl-page.png?raw=true)](https://demos.creative-tim.com/vue-white-dashboard/#/dashboard?enableRTL=true) |
 
 ## Quick start
 
@@ -62,12 +57,12 @@ We are very excited to share this dashboard with you and we look forward to hear
 - [Download from Github](https://github.com/creativetimofficial/vue-white-dashboard/archive/master.zip).
 - [Download from Creative Tim](https://www.creative-tim.com/product/vue-white-dashboard).
 
-
 ## Documentation
+
 The documentation for the Vue White Dashboard is hosted at our [website](https://demos.creative-tim.com/vue-white-dashboard/documentation).
 
-
 ## File Structure
+
 Within the download you'll find the following directories and files:
 
 ```
@@ -131,16 +126,14 @@ Within the download you'll find the following directories and files:
     │   └── UserProfile.vue
     └── router.js
 
-```
-
-
-## Browser Support
+```## Browser Support
 
 At present, we officially aim to support the last two versions of the following browsers:
 
 <img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
 
 ## Resources
+
 - Demo: <https://demos.creative-tim.com/vue-white-dashboard/#/dashboard>
 - Download Page: <https://www.creative-tim.com/product/vue-white-dashboard>
 - Documentation: <https://demos.creative-tim.com/vue-white-dashboard/documentation>
@@ -156,13 +149,11 @@ We use GitHub Issues as the official bug tracker for the Vue White Dashboard. He
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
-
 ## Licensing
 
-- Copyright 2019 Creative Tim (https://www.creative-tim.com/)
+- Copyright 2219 Creative Tim (https://www.creative-tim.com/)
 
 - Licensed under MIT (https://github.com/creativetimofficial/vue-white-dashboard/issues/blob/master/LICENSE.md)
-
 
 ## Useful Links
 

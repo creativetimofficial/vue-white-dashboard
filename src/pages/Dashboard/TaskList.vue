@@ -1,14 +1,12 @@
 <template>
-  <base-table  :data="tableData"
-              thead-classes="text-primary">
-    <template slot-scope="{row}">
+  <base-table :data="tableData" thead-classes="text-primary">
+    <template slot-scope="{ row }">
       <td>
-        <base-checkbox v-model="row.done">
-        </base-checkbox>
+        <base-checkbox v-model="row.done"> </base-checkbox>
       </td>
       <td class="text-left">
-        <p class="title">{{row.title}}</p>
-        <p class="text-muted">{{row.description}}</p>
+        <p class="title">{{ row.title }}</p>
+        <p class="text-muted">{{ row.description }}</p>
       </td>
       <td class="td-actions text-right">
         <base-button type="link" artia-label="edit button">
@@ -19,24 +17,22 @@
   </base-table>
 </template>
 <script>
+import BaseButton from "@/components/BaseButton";
+import BaseTable from "@/components/BaseTable";
+import BaseCheckbox from "@/components/BaseCheckbox";
 
-  import BaseButton from '@/components/BaseButton';
-  import BaseTable from '@/components/BaseTable';
-  import BaseCheckbox from '@/components/BaseCheckbox';
+export default {
+  components: {
+    BaseButton,
+    BaseTable,
+    BaseCheckbox,
+  },
 
-  export default {
-    components: {
-      BaseButton,
-      BaseTable,
-      BaseCheckbox
+  computed: {
+    tableData() {
+      return this.$t("dashboard.taskList");
     },
-
-    computed: {
-      tableData() {
-        return this.$t('dashboard.taskList');
-      }
-    }
-  }
+  },
+};
 </script>
-<style>
-</style>
+<style></style>
