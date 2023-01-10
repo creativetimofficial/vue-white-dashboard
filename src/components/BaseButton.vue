@@ -6,32 +6,31 @@
     @click="handleClick"
     class="btn"
     :class="[
-      {'btn-round': round},
-      {'btn-block': block},
-      {'btn-icon btn-fab': icon},
-      {[`btn-${type}`]: type},
-      {[`btn-${size}`]: size},
-      {'btn-simple':simple},
-      {'btn-link':link},
-      {'disabled':disabled && tag!=='button'}
-    ]">
+      { 'btn-round': round },
+      { 'btn-block': block },
+      { 'btn-icon btn-fab': icon },
+      { [`btn-${type}`]: type },
+      { [`btn-${size}`]: size },
+      { 'btn-simple': simple },
+      { 'btn-link': link },
+      { disabled: disabled && tag !== 'button' },
+    ]"
+  >
     <slot name="loading">
       <i v-if="loading" class="fas fa-spinner fa-spin"></i>
     </slot>
+
     <slot></slot>
   </component>
 </template>
+
 <script>
 export default {
-  name:"base-button",
+  name: "base-button",
   props: {
     tag: {
       type: String,
-      default: "button"
-    },
-    nativeType:{
-      type: String,
-      default: "button"
+      default: "button",
     },
     round: Boolean,
     icon: Boolean,
@@ -40,29 +39,29 @@ export default {
     loading: Boolean,
     type: {
       type: String,
-      default: "default"
+      default: "default",
     },
-    nativeType:{
+    nativeType: {
       type: String,
-      default: "button"
+      default: "button",
     },
-    size:{
+    size: {
       type: String,
-      default:""
+      default: "",
     },
-    simple:{
-      type: Boolean
+    simple: {
+      type: Boolean,
     },
-    link:{
-      type: Boolean
-    }
+    link: {
+      type: Boolean,
+    },
   },
-  methods:{
-    handleClick(evt){
+  methods: {
+    handleClick(evt) {
       this.$emit("click", evt);
-    }
-  }
-}
+    },
+  },
+};
 </script>
-<style>
-</style>
+
+<style></style>
