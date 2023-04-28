@@ -1,162 +1,157 @@
-.card{
-    background: $white;
-    border: 0;
-    position: relative;
-    width: 100%;
-    margin-bottom: 30px;
-    box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
+.card {
+  background: $white;
+  border: 0;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05);
 
-    label{
-      color: rgba($white, 0.6);
-    }
+  label {
+    color: rgba($white, 0.6);
+  }
 
-    .card{
-      box-shadow: none;
+  .card {
+    box-shadow: none;
+  }
+
+  .card-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .card-body {
+    padding: 15px;
+
+    &.table-full-width {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .card-title {
-      margin-bottom: .75rem;
+      color: $black-states;
+      text-transform: inherit;
+      font-weight: $font-weight-light;
+      margin-bottom: 0.75rem;
     }
 
-    .card-body{
-      padding: 15px;
-
-      &.table-full-width{
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .card-title{
-        color: $black-states;
-        text-transform: inherit;
-        font-weight: $font-weight-light;
-        margin-bottom: .75rem;
-      }
-
-      .card-description, .card-category{
-        color: $black-states;
-      }
-
+    .card-description,
+    .card-category {
+      color: $black-states;
     }
+  }
 
-    .card-header{
-      &:not([data-background-color]){
-        background-color: transparent;
-      }
-      padding: 15px 15px 0;
-      border: 0;
+  .card-header {
+    &:not([data-background-color]) {
+      background-color: transparent;
+    }
+    padding: 15px 15px 0;
+    border: 0;
+    color: $black;
+
+    a[data-toggle="collapse"] {
       color: $black;
-
-      a[data-toggle="collapse"]{
-        color: $black;
-      }
-
-      .card-title{
-          color:$black-states;
-          font-weight: 100;
-      }
-
-      .card-category{
-        color: $dark-gray;
-        margin-bottom: 5px;
-        font-weight: 300;
-      }
     }
 
-    .map{
-        border-radius: $border-radius-sm;
-
-        &.map-big{
-          height: 420px;
-        }
+    .card-title {
+      color: $black-states;
+      font-weight: 100;
     }
 
-    &.card-plain {
-      background: $transparent-bg;
-      box-shadow: none;
+    .card-category {
+      color: $dark-gray;
+      margin-bottom: 5px;
+      font-weight: 300;
     }
+  }
 
-    .image{
-        overflow: hidden;
-        height: 200px;
+  .map {
+    border-radius: $border-radius-sm;
+
+    &.map-big {
+      height: 420px;
+    }
+  }
+
+  &.card-plain {
+    background: $transparent-bg;
+    box-shadow: none;
+  }
+
+  .image {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: $font-size-sm;
+    margin-bottom: 5px;
+  }
+
+  label:not(.btn) {
+    color: $default;
+  }
+
+  .card-footer {
+    background-color: transparent;
+    border: 0;
+    padding: 15px;
+
+    .stats {
+      i {
+        margin-right: 5px;
         position: relative;
-    }
-
-    .avatar{
-        width: 30px;
-        height: 30px;
-        overflow: hidden;
-        border-radius: 50%;
-        margin-bottom: 15px;
-    }
-
-    label{
-        font-size: $font-size-sm;
-        margin-bottom: 5px;
-
-    }
-
-    label:not(.btn){
-      color: $default;
-    }
-
-    .card-footer{
-        background-color: transparent;
-        border: 0;
-        padding: 15px;
-
-
-        .stats{
-            i{
-                margin-right: 5px;
-                position: relative;
-
-            }
-        }
-
-        h6{
-          margin-bottom: 0;
-          padding: 7px 0;
-        }
-    }
-
-    &.card-tasks{
-      .card-body{
-        i{
-          color: rgba(34,42,66,0.7);
-          &:hover{
-            color: $black;
-          }
-        }
       }
     }
 
-
-     &.nav-pills .nav-item .nav-link {
-        color: $nav-gray;
-        background-color: hsla(0,0%,87%,.3);
-        &:not(.active):hover{
-          background: hsla(0,0%,87%,.5);
-        }
-        &.active{
-          color: $white;
-
-        }
+    h6 {
+      margin-bottom: 0;
+      padding: 7px 0;
     }
+  }
 
-    .tab-content .tab-pane {
-        color: $nav-gray;
+  &.card-tasks {
+    .card-body {
+      i {
+        color: rgba(34, 42, 66, 0.7);
+        &:hover {
+          color: $black;
+        }
+      }
     }
+  }
+
+  &.nav-pills .nav-item .nav-link {
+    color: $nav-gray;
+    background-color: hsla(0, 0%, 87%, 0.3);
+    &:not(.active):hover {
+      background: hsla(0, 0%, 87%, 0.5);
+    }
+    &.active {
+      color: $white;
+    }
+  }
+
+  .tab-content .tab-pane {
+    color: $nav-gray;
+  }
 }
 
-.card-body{
+.card-body {
   padding: $card-spacer-y;
 }
 
 @include media-breakpoint-down(sm) {
   .card.card-chart .card-header {
     .btn-group-toggle .tim-icons {
-      font-size: .875rem;
+      font-size: 0.875rem;
       top: -1px;
     }
   }
