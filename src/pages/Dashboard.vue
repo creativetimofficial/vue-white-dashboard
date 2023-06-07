@@ -13,7 +13,7 @@
                   <h5 class="card-category">مجموع الشحنات</h5>
                 </template>
                 <template v-if="!isRTL">
-                  <h2 class="card-title">Performance</h2>
+                  <h2 class="card-title">Test Code</h2>
                 </template>
                 <template v-else>
                   <h2 class="card-title">أداء</h2>
