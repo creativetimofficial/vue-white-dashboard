@@ -42,6 +42,43 @@ import { Card } from "@/components/index";
 
 import BaseTable from "@/components/BaseTable";
 
+import axios from "axios"; 
+
+export default {
+  components: {
+    Card,
+    BaseTable,
+  },
+  data() {
+    return {
+      table1: {
+	title: "Simple Table",
+	columns: [...tableColumns],
+	data: [...tableData],
+      },
+      table2: {
+	title: "Table on Plain Background",
+	columns: [...tableColumns],
+	data: [...tableData],
+      },
+    };
+  },
+methods : {
+	async getTableData() {
+		try {
+    		const response = await axios.get("http://192.168.127.76:8888/ttd/1")
+    				this.table1 = response.data;
+				console.log(this.table1);
+			}catch(error) {
+    				console.log(error);
+  			}
+		}
+},
+mounted() {
+	this.getTableData();
+},
+};
+
 const tableColumns = ["Name", "Country", "City", "Salary"];
 const tableData = [
   {
@@ -86,34 +123,8 @@ const tableData = [
     country: "Chile",
     city: "Gloucester",
   },
-  {
-    id: 7,
-    name: "Jon Porter",
-    salary: "$78,615",
-    country: "Portugal",
-    city: "Gloucester",
-  },
 ];
 
-export default {
-  components: {
-    Card,
-    BaseTable,
-  },
-  data() {
-    return {
-      table1: {
-        title: "Simple Table",
-        columns: [...tableColumns],
-        data: [...tableData],
-      },
-      table2: {
-        title: "Table on Plain Background",
-        columns: [...tableColumns],
-        data: [...tableData],
-      },
-    };
-  },
-};
+
 </script>
 <style></style>
