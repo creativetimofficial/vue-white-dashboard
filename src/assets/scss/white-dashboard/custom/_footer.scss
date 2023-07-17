@@ -1,58 +1,55 @@
-.footer{
-    padding: 24px 0 24px 250px;
+.footer {
+  padding: 24px 0 24px 250px;
 
-    [class*="container-"] {
-      padding: 0;
+  [class*="container-"] {
+    padding: 0;
+  }
+
+  .nav {
+    display: inline-block;
+    float: left;
+    margin-bottom: 0;
+    padding-left: 30px;
+    list-style: none;
+  }
+
+  .nav-item {
+    display: inline-block;
+
+    &:first-child a {
+      padding-left: 0;
     }
+  }
 
-    .nav{
-        display: inline-block;
-        float: left;
-        margin-bottom: 0;
-        padding-left: 30px;
-        list-style: none;
-    }
+  .nav-link {
+    padding: 0 $padding-base-vertical;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    text-decoration: none;
 
-    .nav-item{
-      display: inline-block;
-
-      &:first-child a {
-        padding-left: 0;
-      }
-    }
-
-    .nav-link {
-      padding: 0 $padding-base-vertical;
-      font-size: $font-size-sm;
-      text-transform: uppercase;
+    &:hover {
       text-decoration: none;
-
-      &:hover{
-          text-decoration: none;
-      }
     }
+  }
 
+  .copyright {
+    font-size: $font-size-sm;
+    line-height: 1.8;
+    color: $black-states;
+  }
 
+  &:after {
+    display: table;
+    clear: both;
+    content: " ";
+  }
 
-    .copyright{
-        font-size: $font-size-sm;
-        line-height: 1.8;
-        color: $black-states;
-    }
-
-    &:after{
-        display: table;
-        clear: both;
-        content: " ";
-    }
-
-    ul li a{
-      color: $black-states;
-    }
+  ul li a {
+    color: $black-states;
+  }
 }
 
-
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
   .footer {
     padding-left: 0px;
 
@@ -63,7 +60,7 @@
   }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
   .footer {
     .copyright {
       float: right;
@@ -72,7 +69,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .footer {
     nav {
       display: block;
@@ -82,14 +79,14 @@
   }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
   .footer {
     text-align: center;
     .copyright {
       text-align: center;
     }
 
-    .nav{
+    .nav {
       float: none;
       padding-left: 0;
     }

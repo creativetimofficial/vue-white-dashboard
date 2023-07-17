@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Vue White Dashboard - v1.1.0
+* Vue White Dashboard - v1.1.1
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/vue-white-dashboard

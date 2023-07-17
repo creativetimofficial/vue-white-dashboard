@@ -1,6 +1,6 @@
 # [Vue White Dashboard](https://demos.creative-tim.com/vue-white-dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/share?url=https%3A%2F%2Fdemos.creative-tim.com%2Fvue-white-dashboard&text=Vue%20White%20Dashboard%20by%20Creative%20Tim&via=CreativeTim&hashtags=vuejs%20%23white%20%23dashboard)
 
-![version](https://img.shields.io/badge/version-1.1.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/white-dashboard/issues.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-white-dashboard/issues/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vue-white-dashboard/issues.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-white-dashboard/issues/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+![version](https://img.shields.io/badge/version-1.1.1-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/white-dashboard/issues.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-white-dashboard/issues/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vue-white-dashboard/issues.svg?maxAge=2592000)](https://github.com/creativetimofficial/vue-white-dashboard/issues/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
 ![Product Gif](https://github.com/creativetimofficial/vue-white-dashboard/blob/live-demo/src/assets/demo/product-gif.gif?raw=true)
 
@@ -65,7 +65,7 @@ The documentation for the Vue White Dashboard is hosted at our [website](https:/
 
 Within the download you'll find the following directories and files:
 
-```
+````
 |-- Vue White Dashboard
     ├── CHANGELOG.md
     ├── README.md
@@ -177,3 +177,4 @@ Facebook: <https://www.facebook.com/CreativeTim>
 Dribbble: <https://dribbble.com/creativetim>
 
 Instagram: <https://www.instagram.com/CreativeTimOfficial>
+````
