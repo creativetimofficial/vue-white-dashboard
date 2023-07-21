@@ -42,12 +42,55 @@ import { Card } from "@/components/index";
 
 import BaseTable from "@/components/BaseTable";
 
-const tableColumns = ["Name", "Country", "City", "Salary"];
+import axios from "axios"; 
+
+export default {
+  components: {
+    Card,
+    BaseTable,
+  },
+  data() {
+    return {
+     table1:{
+	title: "Simple Table",
+	columns: [...table1Columns],
+	data: [],
+     },
+     table2:{
+        title: "Table on Plain Background",
+        columns: [...tableColumns],
+        data: [...tableData],
+      },
+    };
+  },
+methods : {
+	async getTableData() {
+		try {
+    		const response = await axios.get("http://192.168.127.76:8888/ttd/1")
+				console.log(Object.values(response.data[1]));
+				console.log(typeof Object.values(response.data[1]));
+    				return Object.values(response.data[1]);
+
+			}catch(error) {
+    				console.log(error);
+  			}
+		}
+},
+async mounted() {
+	this.table1.data = await this.getTableData();
+
+
+	console.log("mounted");
+	console.log(this.table1.data);
+},
+};
+const table1Columns = ["DRB_AirDL","DRB_AirUL","DRB_RlcDL","DRB_RlcUL","Date","Handover","Total_Delay"];
+const tableColumns = ["id", "country", "city", "salary"];
 const tableData = [
   {
     id: 1,
     name: "Dakota Rice",
-    salary: "$36.738",
+    salary: 36.738,
     country: "Niger",
     city: "Oud-Turnhout",
   },
@@ -86,34 +129,8 @@ const tableData = [
     country: "Chile",
     city: "Gloucester",
   },
-  {
-    id: 7,
-    name: "Jon Porter",
-    salary: "$78,615",
-    country: "Portugal",
-    city: "Gloucester",
-  },
 ];
 
-export default {
-  components: {
-    Card,
-    BaseTable,
-  },
-  data() {
-    return {
-      table1: {
-        title: "Simple Table",
-        columns: [...tableColumns],
-        data: [...tableData],
-      },
-      table2: {
-        title: "Table on Plain Background",
-        columns: [...tableColumns],
-        data: [...tableData],
-      },
-    };
-  },
-};
+
 </script>
 <style></style>
