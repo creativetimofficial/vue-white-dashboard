@@ -70,7 +70,6 @@ methods : {
 				console.log(Object.values(response.data[1]));
 				console.log(typeof Object.values(response.data[1]));
     				return Object.values(response.data[1]);
-
 			}catch(error) {
     				console.log(error);
   			}

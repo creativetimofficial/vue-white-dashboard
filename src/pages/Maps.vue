@@ -16,7 +16,7 @@ export default {
     Card,
   },
   mounted() {
-    let myLatlng = new window.google.maps.LatLng(40.748817, -73.985428);
+    let myLatlng = new window.google.maps.LatLng(24.7742387, 121.0479446);
     let mapOptions = {
       zoom: 13,
       center: myLatlng,
