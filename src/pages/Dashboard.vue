@@ -13,35 +13,9 @@
                   <h5 class="card-category">مجموع الشحنات</h5>
                 </template>
                 <template v-if="!isRTL">
-                  <h2 class="card-title">Test Code</h2>
+                  <h2 class="card-title">Performance</h2>
                 </template>
-		<script>
-		import axios from "axios";
-		export default {
-    			data() {
-        			return {
-           				res: [],
-       				};
-    			},
-    			name: "App",
-    			methods: {
-        		// The get method called by the function
-        			onGet() {
-            				axios
-                				.get("https://jsonplaceholder.typicode.com/todos")
-                				.then((response) => {
-                   					console.log(response);
-                    					// using stringify to beautify the output
-                    					this.res = JSON.stringify(response.data);
-                				})
-                			.catch((errors) => {
-                    				console.log(errors); // Errors
-                			});
-        			},
-    			},
-		};
-		</script>
-		<template v-else>
+                <template v-else>
                   <h2 class="card-title">أداء</h2>
                 </template>
               </div>
