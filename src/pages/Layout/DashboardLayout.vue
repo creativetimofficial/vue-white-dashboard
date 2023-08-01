@@ -53,27 +53,27 @@
         </template>
       </sidebar-link>
 
-      <sidebar-link to="/user">
-        <i class="tim-icons icon-single-02"></i>
-
-        <template v-if="!isRTL">
-          <p>User Profile</p>
-        </template>
-
-        <template v-else>
-          <p>ملف تعريفي للمستخدم</p>
-        </template>
-      </sidebar-link>
-
       <sidebar-link to="/table">
         <i class="tim-icons icon-puzzle-10"></i>
 
         <template v-if="!isRTL">
-          <p>Table List</p>
+          <p>AD Table</p>
         </template>
 
         <template v-else>
           <p>قائمة الجدول</p>
+        </template>
+      </sidebar-link>
+
+      <sidebar-link to="/user">
+        <i class="tim-icons icon-single-02"></i>
+
+        <template v-if="!isRTL">
+          <p>COD Table</p>
+        </template>
+
+        <template v-else>
+          <p>ملف تعريفي للمستخدم</p>
         </template>
       </sidebar-link>
 
