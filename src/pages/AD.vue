@@ -207,21 +207,21 @@ export default {
     };
   },
 methods : {
-	async getTableData(tableInfo , pageNumber) {
+	async getTableData(gnbNumber , tableInfo , pageNumber) {
 		console.log(tableInfo);
 		console.log(pageNumber);
 		console.log(this.table1.currentPage);
 		try {
-    		const response = await axios.get(`http://192.168.127.76:8888/${tableInfo}/1/${pageNumber}`);
-				console.log(Object.values(response.data[1]));
-				console.log(typeof Object.values(response.data[1]));
-    				return Object.values(response.data[1]);
+    		const response = await axios.get(`http://192.168.127.76:8888/${tableInfo}/${gnbNumber}/${pageNumber}`);
+				console.log(Object.values(response.data[this.table1.currentGnb]));
+				console.log(typeof Object.values(response.data[this.table1.currentGnb]));
+    				return Object.values(response.data[this.table1.currentGnb]);
 			}catch(error) {
     				console.log(error);
   			}
 		},
 	async loadDataForCurrentPage() {
-		this.table1.data = await this.getTableData(this.table1.currentDataST , this.table1.currentPage);
+		this.table1.data = await this.getTableData(this.table1.currentGnb , this.table1.currentDataST , this.table1.currentPage);
 	},
 	prevPage() {
 		if (this.table1.currentPage > 1) {
