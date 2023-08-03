@@ -4,7 +4,24 @@
       <div class="col-12">
         <card>
           <template slot="header">
-            <h4 class="card-title">Simple Table</h4>
+            <h4 class="card-title">AD Data Table</h4>
+	    <div class="gnbla">	
+	    	<!--
+	        <button class="gnbno-btn" @click="" :disabled="table1.currentGnb === 1">1</button>
+	        <button class="gnbno-btn" @click="" :disabled="table1.currentGnb === 2">2</button>
+	        <button class="gnbno-btn" @click="" :disabled="table1.currentGnb === 3">3</button>
+	        <button class="gnbno-btn" @click="" :disabled="table1.currentGnb === 4">4</button>
+	        <button class="gnbno-btn" @click="" :disabled="table1.currentGnb === 5">5</button>
+		-->
+		<button class="gb-info" @click="gnbBtn">GNodeB No </button>
+		<span class="gnb-info">{{table1.currentGnb}}</span>
+	    </div>
+	    <div class="tablela">
+	        <button class="ttd-btn" @click="ttdBtn" :disabled="table1.currentDataST === ttd">Train Data</button>
+	        <button class="trd-btn" @click="trdBtn" :disabled="table1.currentDataST === trd">Test Data</button>
+	        <button class="vld-btn" @click="vldBtn" :disabled="table1.currentDataST === vld">Validation Data</button>
+		<span class="page-info">{{table1.currentDataName}}</span>
+	    </div>
           </template>
           <div class="table-responsive text-left">
             <base-table
@@ -14,10 +31,12 @@
 	      :items-per-page="10"
             >
             </base-table>
-	    <div class="oagination">
-		<button class="prev-button" @click="prevPage" :disable="currentPage === 1">Forward</button>
-		<span>{{currentPage}}</span>
-		<button class="next-button" @click="nextPage" :disable="currentPage === 10">Backward</button>
+	    <div class="pagination">
+		<button class="prev-button" @click="firstPage" :disabled="table1.currentPage === 1">First</button>
+		<button class="prev-button" @click="prevPage" :disabled="table1.currentPage === 1">Forward</button>
+		<button class="next-button" @click="nextPage" :disabled="table1.currentPage === 50">Backward</button>
+		<button class="next-button" @click="tailPage" :disabled="table1.currentPage === 50">Last</button>
+		<span class="page-info">Current Page   {{table1.currentPage}}/{{this.totalPages}}</span>
 	    </div>
           </div>
         </card>
@@ -104,6 +123,9 @@ export default {
      table1:{
 	title: "AD Data Table",
 	currentPage: 1,
+	currentDataST: "ttd",
+	currentDataName: "Train Data",
+	currentGnb: 1,
 	columns: [...table1Columns],
 	data: [],
      },
@@ -185,9 +207,12 @@ export default {
     };
   },
 methods : {
-	async getTableData(pageNumber) {
+	async getTableData(tableInfo , pageNumber) {
+		console.log(tableInfo);
+		console.log(pageNumber);
+		console.log(this.table1.currentPage);
 		try {
-    		const response = await axios.get("http://192.168.127.76:8888/ttd/1/5");
+    		const response = await axios.get(`http://192.168.127.76:8888/${tableInfo}/1/${pageNumber}`);
 				console.log(Object.values(response.data[1]));
 				console.log(typeof Object.values(response.data[1]));
     				return Object.values(response.data[1]);
@@ -196,25 +221,63 @@ methods : {
   			}
 		},
 	async loadDataForCurrentPage() {
-		this.table1.data = await this.getTableData(this.currentPage);
+		this.table1.data = await this.getTableData(this.table1.currentDataST , this.table1.currentPage);
 	},
 	prevPage() {
-		if (this.currentPage > 1) {
-			this.currentPage--;
+		if (this.table1.currentPage > 1) {
+			console.log(this.table1.currentPage);
+			this.table1.currentPage--;
 			this.loadDataForCurrentPage();
 		}
 	},
 	nextPage() {
-		if (this.currentPage < this.totalPages) {
-			this.currentPage++;
+		if (this.table1.currentPage < this.totalPages) {
+			this.table1.currentPage++;
 			this.loadDataForCurrentPage();
 		}
+	},
+	firstPage() {
+		this.table1.currentPage = 1;
+		this.loadDataForCurrentPage();
+	},
+	tailPage() {
+		this.table1.currentPage = this.totalPages;
+		this.loadDataForCurrentPage();
+	},
+	ttdBtn() {
+		this.table1.currentDataST = "ttd";
+		this.table1.currentDataName = "Train Data";
+		this.table1.currentPage = 1;
+		this.loadDataForCurrentPage();
+	},
+	trdBtn() {
+		this.table1.currentDataST = "trd";
+		this.table1.currentDataName = "Test Data";
+		this.table1.currentPage = 1;
+		this.loadDataForCurrentPage();
+	},
+	vldBtn() {
+		this.table1.currentDataST = "vld";
+		this.table1.currentDataName = "Validation Data";
+		this.table1.currentPage = 1;
+		this.loadDataForCurrentPage();
+	},
+	gnbBtn() {
+		if(this.table1.currentGnb < 5){
+			this.table1.currentGnb++;
+		}else{
+			this.table1.currentGnb = 1;
+		}
+		this.table1.currentPage = 1;
+		this.table1.currentDataST = "ttd";
+		this.table1.currentDataName = "Train Data";
+		this.loadDataForCurrentPage();
 	},
 	
 },
 computed: {
 	totalPages() {
-		return 10;
+		return 50;
 	},
 },
 async mounted() {
@@ -231,22 +294,98 @@ const table1Columns = ["Date","DRB_AirDL","DRB_AirUL","DRB_RlcDL","DRB_RlcUL","H
 
 </script>
 <style>
+.pagination {
+  display: flex;
+  align-items: center;
+  text-align: center;	
+
+}
 .prev-button {
   background-color: purple;
   color: yellow;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
-  margin-right: 10px;
+  margin: 0 10px;
   cursor: pointer;
 }
-
 .next-button {
   background-color: green;
   color: white;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
+  margin: 0 10px;
   cursor: pointer;
 }
+.page-info {
+  margin-left: auto;
+  font-size: 20px;
+}
+.ttd-btn,
+.trd-btn,
+.vld-btn {
+  background-color: lightgray;
+  color: darkblue;
+  border: none;
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.tablela {
+  display: flex;
+  align-items: center;
+  text-align: center;	
+
+}
+/*테이블 정보*/
+
+
+.gnbla {
+  display: flex;
+  align-items: center;
+  text-align: center;	
+
+}
+/*
+.gnbno-btn {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 5px solid #FFFFFF;
+  background-color: #42A5F5;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px; 
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  */
+.gb-info {
+  background-color: #3F51B5;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.gnb-info {
+  background-color: #3F51B5;
+  color: white;
+  border: 1px solid #FFFFFF;
+  padding: 5px 10px; 
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px; 
+  height: 30px;
+
+  margin: 0 9px;
+}
+
+
 </style>

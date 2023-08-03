@@ -37,12 +37,12 @@ const routes = [
       },
       {
         path: "user",
-        name: "User Profile",
+        name: "COD   Data  For  ITRI",
         component: UserProfile,
       },
       {
         path: "table",
-        name: "Table List",
+        name: "AD(Anomaly Detection)  Data",
         component: TableList,
       },
       {
