@@ -11,8 +11,14 @@
               :data="table1.data"
               :columns="table1.columns"
               thead-classes="text-primary"
+	      :items-per-page="10"
             >
             </base-table>
+	    <div class="oagination">
+		<button class="prev-button" @click="prevPage" :disable="currentPage === 1">Forward</button>
+		<span>{{currentPage}}</span>
+		<button class="next-button" @click="nextPage" :disable="currentPage === 10">Backward</button>
+	    </div>
           </div>
         </card>
       </div>
@@ -96,7 +102,8 @@ export default {
   data() {
     return {
      table1:{
-	title: "Simple Table",
+	title: "AD Data Table",
+	currentPage: 1,
 	columns: [...table1Columns],
 	data: [],
      },
@@ -178,19 +185,41 @@ export default {
     };
   },
 methods : {
-	async getTableData() {
+	async getTableData(pageNumber) {
 		try {
-    		const response = await axios.get("http://192.168.127.76:8888/ttd/1")
+    		const response = await axios.get("http://192.168.127.76:8888/ttd/1/5");
 				console.log(Object.values(response.data[1]));
 				console.log(typeof Object.values(response.data[1]));
     				return Object.values(response.data[1]);
 			}catch(error) {
     				console.log(error);
   			}
+		},
+	async loadDataForCurrentPage() {
+		this.table1.data = await this.getTableData(this.currentPage);
+	},
+	prevPage() {
+		if (this.currentPage > 1) {
+			this.currentPage--;
+			this.loadDataForCurrentPage();
 		}
+	},
+	nextPage() {
+		if (this.currentPage < this.totalPages) {
+			this.currentPage++;
+			this.loadDataForCurrentPage();
+		}
+	},
+	
+},
+computed: {
+	totalPages() {
+		return 10;
+	},
 },
 async mounted() {
-	this.table1.data = await this.getTableData();
+	this.loadDataForCurrentPage();
+	//this.table1.data = await this.getTableData();
 
 
 	console.log("mounted");
@@ -201,4 +230,23 @@ const table1Columns = ["Date","DRB_AirDL","DRB_AirUL","DRB_RlcDL","DRB_RlcUL","H
 
 
 </script>
-<style></style>
+<style>
+.prev-button {
+  background-color: purple;
+  color: yellow;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.next-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
