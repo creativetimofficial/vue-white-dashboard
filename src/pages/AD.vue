@@ -34,9 +34,9 @@
 	    <div class="pagination">
 		<button class="prev-button" @click="firstPage" :disabled="table1.currentPage === 1">First</button>
 		<button class="prev-button" @click="prevPage" :disabled="table1.currentPage === 1">Forward</button>
-		<button class="next-button" @click="nextPage" :disabled="table1.currentPage === 50">Backward</button>
-		<button class="next-button" @click="tailPage" :disabled="table1.currentPage === 50">Last</button>
-		<span class="page-info">Current Page   {{table1.currentPage}}/{{this.totalPages}}</span>
+		<button class="next-button" @click="nextPage" :disabled="table1.currentPage === this.table1.currenttotalPage">Backward</button>
+		<button class="next-button" @click="tailPage" :disabled="table1.currentPage === this.table1.currenttotalPage">Last</button>
+		<span class="page-info">Current Page   {{table1.currentPage}}/{{this.table1.currenttotalPage}}</span>
 	    </div>
           </div>
         </card>
@@ -122,6 +122,7 @@ export default {
     return {
      table1:{
 	title: "AD Data Table",
+	currenttotalPage: 318,
 	currentPage: 1,
 	currentDataST: "ttd",
 	currentDataName: "Train Data",
@@ -231,7 +232,7 @@ methods : {
 		}
 	},
 	nextPage() {
-		if (this.table1.currentPage < this.totalPages) {
+		if (this.table1.currentPage < this.table1.currenttotalPage) {
 			this.table1.currentPage++;
 			this.loadDataForCurrentPage();
 		}
@@ -241,25 +242,28 @@ methods : {
 		this.loadDataForCurrentPage();
 	},
 	tailPage() {
-		this.table1.currentPage = this.totalPages;
+		this.table1.currentPage = this.table1.currenttotalPage;
 		this.loadDataForCurrentPage();
 	},
 	ttdBtn() {
 		this.table1.currentDataST = "ttd";
 		this.table1.currentDataName = "Train Data";
 		this.table1.currentPage = 1;
+		this.table1.currenttotalPage = 318;
 		this.loadDataForCurrentPage();
 	},
 	trdBtn() {
 		this.table1.currentDataST = "trd";
 		this.table1.currentDataName = "Test Data";
 		this.table1.currentPage = 1;
+		this.table1.currenttotalPage = 79;
 		this.loadDataForCurrentPage();
 	},
 	vldBtn() {
 		this.table1.currentDataST = "vld";
 		this.table1.currentDataName = "Validation Data";
 		this.table1.currentPage = 1;
+		this.table1.currenttotalPage = 399;
 		this.loadDataForCurrentPage();
 	},
 	gnbBtn() {
@@ -270,6 +274,7 @@ methods : {
 		}
 		this.table1.currentPage = 1;
 		this.table1.currentDataST = "ttd";
+		this.table1.currenttotalPage = 318;
 		this.table1.currentDataName = "Train Data";
 		this.loadDataForCurrentPage();
 	},
