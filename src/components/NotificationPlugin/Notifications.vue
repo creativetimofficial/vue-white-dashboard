@@ -13,7 +13,6 @@
   </div>
 </template>
 <script>
-import Notification from "./Notification.vue";
 
 export default {
   components: {
