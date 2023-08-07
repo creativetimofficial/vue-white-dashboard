@@ -15,6 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+import { createApp } from 'vue'
 import Vue from "vue";
 import VueRouter from "vue-router";
 import SocialSharing from "vue-social-sharing";
