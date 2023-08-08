@@ -76,7 +76,7 @@ export let purpleChartOptions = {
         ticks: {
           suggestedMin: 60,
           suggestedMax: 125,
-          padding: 20,
+          padding: 10,
           fontColor: "#9a9a9a",
         },
       },
@@ -94,6 +94,13 @@ export let purpleChartOptions = {
           padding: 20,
           fontColor: "#9a9a9a",
         },
+      },
+    ],
+  },
+  chartData: {
+    datasets: [
+      {
+        data: [],
       },
     ],
   },

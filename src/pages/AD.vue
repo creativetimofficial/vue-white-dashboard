@@ -43,80 +43,30 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4">
-        <card type="chart" cardCol>
-          <template slot="header">
-            <h5 class="card-category">{{ $t("dashboard.dailySales") }}</h5>
-            <h3 class="card-title">
-              <i class="tim-icons icon-delivery-fast text-info"></i> 3,500€
-            </h3>
-          </template>
-          <bar-chart
-            class="chart-area"
-            chart-id="blue-bar-chart"
-            :chart-data="blueBarChart.chartData"
-            :gradient-stops="blueBarChart.gradientStops"
-            :extra-options="blueBarChart.extraOptions"
-          >
-          </bar-chart>
-        </card>
-      </div>
-      <div class="col-lg-4">
-        <card type="chart" cardCol>
-          <template slot="header">
-            <h5 class="card-category">{{ $t("dashboard.completedTasks") }}</h5>
-            <h3 class="card-title">
-              <i class="tim-icons icon-send text-success"></i> 12,100K
-            </h3>
-          </template>
-          <line-chart
-	    ref="lineChartInstance"
-            class="chart-area"
-            chart-id="purple-line-chart"
-            :chart-data="purpleLineChart.chartData"
-            :gradient-stops="purpleLineChart.gradientStops"
-            :extra-options="purpleLineChart.extraOptions"
-          >
-          </line-chart>
-        </card>
-      </div>
-      <div class="col-lg-4" :class="{ 'text-right': isRTL }">
-        <card type="chart" cardCol>
-          <template slot="header">
-            <h5 class="card-category">{{ $t("dashboard.totalShipments") }}</h5>
-            <h3 class="card-title">
-              <i class="tim-icons icon-bell-55 text-primary"></i> 763,215
-            </h3>
-          </template>
-          <line-chart
-            class="chart-area"
-            chart-id="green-line-chart"
-            :chart-data="greenLineChart.chartData"
-            :gradient-colors="greenLineChart.gradientColors"
-            :gradient-stops="greenLineChart.gradientStops"
-            :extra-options="greenLineChart.extraOptions"
-          >
-          </line-chart>
-        </card>
-      </div>
-    </div>
-  </div>
-</template>
-<script>
+      <line-chart ref="blackChartInstance" :chart-data="AirDLChart"></line-chart>
+      <line-chart ref="blackChartInstance" :chart-data="AirULChart"></line-chart>
+      <line-chart ref="blackChartInstance" :chart-data="RlcDLChart"></line-chart>
+      <line-chart ref="blackChartInstance" :chart-data="RlcULChart"></line-chart>
+      <line-chart ref="blackChartInstance" :chart-data="HandoverChart"></line-chart>
+      <line-chart ref="blackChartInstance" :chart-data="blackChart"></line-chart>
+    </div>                                                                       
+  </div>                                                                         
+</template>                                                                      
+<script>                                                                         
 import { Card } from "@/components/index";
+import { Line, mixins } from "vue-chartjs";
 import LineChart from "@/components/Charts/LineChart";
-import BarChart from "@/components/Charts/BarChart";
 import * as chartConfigs from "@/components/Charts/config";
 import BaseTable from "@/components/BaseTable";
 import config from "@/config";
 
 import axios from "axios"; 
 
+const chartlabels = ["Date","DRB_AirDL","DRB_AirUL","DRB_RlcDL","DRB_RlcUL","Handover","Total_Delay"];
 export default {
   components: {
     Card,
     BaseTable,
-    BarChart,
     LineChart,
   },
   data() {
@@ -131,81 +81,144 @@ export default {
 	columns: [...table1Columns],
 	data: [],
      },
-     blueBarChart: {
-       extraOptions: chartConfigs.barChartOptions,
-       chartData: {
-         labels: ["USA", "GER", "AUS", "UK", "RO", "BR"],
-         datasets: [
-           {
-             label: "Countries",
-             fill: true,
-             borderColor: config.colors.info,
-             borderWidth: 2,
-             borderDash: [],
-             borderDashOffset: 0.0,
-             data: [53, 20, 10, 80, 100, 45],
-           },
-         ],
-       },
-       gradientColors: config.colors.primaryGradient,
-       gradientStops: [1, 0.4, 0],
-     },
-     purpleLineChart: {
-       extraOptions: chartConfigs.purpleChartOptions,
-       chartData: {
-         labels: ["USA", "GER", "AUS", "UK", "RO", "BR"],
-         datasets: [
-           {
-             label: "My First dataset",
-             fill: true,
-             borderColor: config.colors.danger,
-             borderWidth: 2,
-             borderDash: [],
-             borderDashOffset: 0.0,
-             pointBackgroundColor: config.colors.danger,
-             pointBorderColor: "rgba(255,255,255,0)",
-             pointHoverBackgroundColor: config.colors.danger,
-             pointBorderWidth: 20,
-             pointHoverRadius: 4,
-             pointHoverBorderWidth: 15,
-             pointRadius: 4,
-             data: [0.11,20,0.30,0.40,0.50,0.60],
-           },
-         ],
-       },
-       gradientColors: [
-         "rgba(66,134,121,0.15)",
-         "rgba(66,134,121,0.0)",
-         "rgba(66,134,121,0)",
-       ],
-       gradientStops: [1, 0.4, 0],
-     },
-     greenLineChart: {
-       extraOptions: chartConfigs.greenChartOptions,
-       chartData: {
-         labels: ["JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
-         datasets: [
-           {
-             label: "Data",
-             fill: true,
-             borderColor: config.colors.primary,
-             borderWidth: 2,
-             borderDash: [],
-             borderDashOffset: 0.0,
-             pointBackgroundColor: config.colors.primary,
-             pointBorderColor: "rgba(255,255,255,0)",
-             pointHoverBackgroundColor: config.colors.primary,
-             pointBorderWidth: 20,
-             pointHoverRadius: 4,
-             pointHoverBorderWidth: 15,
-             pointRadius: 4,
-             data: [0.11, 100, 70, 80, 120, 700],
-           },
-         ],
-       },
-       gradientColors: config.colors.primaryGradient,
-       gradientStops: [1, 0.2, 0],
-     },
+     AirDLChart: {
+        labels: [],// Your labels here
+        datasets: [
+          {
+            label: "Air Downlink Delay Chart",
+            fill: true,
+            borderColor: "black", // Change color as needed
+            borderWidth: 1,
+            borderDash: [],
+	    threshold: 0.15,
+            borderDashOffset: 0.0,
+            // use data is or not over threshold to change pointBackGroundColor
+	    pointBackgroundColor: "black",
+            pointBorderColor: "rgba(255,255,255,0)",
+            pointHoverBackgroundColor: "black", // Change color as needed
+            pointBorderWidth: 20,
+            pointHoverRadius: 3,
+            pointHoverBorderWidth: 39,
+            pointRadius: 3,
+            data: [], // Your data here
+          },
+        ],
+      },
+     AirULChart: {
+        labels: [], // Your labels here
+        datasets: [
+          {
+            label: "Air Uplink Delay Chart",
+            fill: true,
+            borderColor: "black", // Change color as needed
+            borderWidth: 1,
+            borderDash: [],
+	    threshold: 0.15,
+            borderDashOffset: 0.0,
+            // use data is or not over threshold to change pointBackGroundColor
+	    pointBackgroundColor: "black",
+            pointBorderColor: "rgba(255,255,255,0)",
+            pointHoverBackgroundColor: "black", // Change color as needed
+            pointBorderWidth: 20,
+            pointHoverRadius: 3,
+            pointHoverBorderWidth: 39,
+            pointRadius: 3,
+            data: [], // Your data here
+          },
+        ],
+      },
+     RlcDLChart: {
+        labels: [], // Your labels here
+        datasets: [
+          {
+            label: "Rlc Downlink Delay Chart",
+            fill: true,
+            borderColor: "black", // Change color as needed
+            borderWidth: 1,
+            borderDash: [],
+	    threshold: 0.15,
+            borderDashOffset: 0.0,
+            // use data is or not over threshold to change pointBackGroundColor
+	    pointBackgroundColor: "black",
+            pointBorderColor: "rgba(255,255,255,0)",
+            pointHoverBackgroundColor: "black", // Change color as needed
+            pointBorderWidth: 20,
+            pointHoverRadius: 3,
+            pointHoverBorderWidth: 39,
+            pointRadius: 3,
+            data: [], // Your data here
+          },
+        ],
+      },
+     RlcULChart: {
+        labels: [], // Your labels here
+        datasets: [
+          {
+            label: "Rlc UpLink Delay Chart",
+            fill: true,
+            borderColor: "black", // Change color as needed
+            borderWidth: 1,
+            borderDash: [],
+	    threshold: 0.15,
+            borderDashOffset: 0.0,
+            // use data is or not over threshold to change pointBackGroundColor
+	    pointBackgroundColor: "black",
+            pointBorderColor: "rgba(255,255,255,0)",
+            pointHoverBackgroundColor: "black", // Change color as needed
+            pointBorderWidth: 20,
+            pointHoverRadius: 3,
+            pointHoverBorderWidth: 39,
+            pointRadius: 3,
+            data: [], // Your data here
+          },
+        ],
+      },
+     HandoverChart: {
+        labels: [], // Your labels here
+        datasets: [
+          {
+            label: "Handover Success Rate Chart",
+            fill: true,
+            borderColor: "black", // Change color as needed
+            borderWidth: 1,
+            borderDash: [],
+	    threshold: 0.15,
+            borderDashOffset: 0.0,
+            // use data is or not over threshold to change pointBackGroundColor
+	    pointBackgroundColor: "black",
+            pointBorderColor: "rgba(255,255,255,0)",
+            pointHoverBackgroundColor: "black", // Change color as needed
+            pointBorderWidth: 20,
+            pointHoverRadius: 3,
+            pointHoverBorderWidth: 39,
+            pointRadius: 3,
+            data: [], // Your data here
+          },
+        ],
+      },
+     blackChart: {
+        labels: [], // Your labels here
+        datasets: [
+          {
+            label: "Total Delay Chart",
+            fill: true,
+            borderColor: "black", // Change color as needed
+            borderWidth: 1,
+            borderDash: [],
+	    threshold: 0.15,
+            borderDashOffset: 0.0,
+            // use data is or not over threshold to change pointBackGroundColor
+	    pointBackgroundColor: "black",
+            pointBorderColor: "rgba(255,255,255,0)",
+            pointHoverBackgroundColor: "black", // Change color as needed
+            pointBorderWidth: 20,
+            pointHoverRadius: 3,
+            pointHoverBorderWidth: 39,
+            pointRadius: 3,
+            data: [], // Your data here
+          },
+        ],
+      },
     };
   },
 methods : {
@@ -226,28 +239,31 @@ methods : {
 		try {
     		const response = await axios.get(`http://192.168.127.76:8888/${tableInfo}/${gnbNumber}/${pageNumber}`);
 				console.log(typeof Object.values(response.data[this.table1.currentGnb]));
-    				return (Object.values(response.data[this.table1.currentGnb])).map((item) => item.Handover);
+    				return Object.values(response.data[this.table1.currentGnb]);
 			}catch(error) {
     				console.log(error);
   			}
 	},
 	async loadDataForCurrentPage() {
 		this.table1.data = await this.getTableData(this.table1.currentGnb , this.table1.currentDataST , this.table1.currentPage);
-		const fetchdata = await this.getChartData(this.table1.currentGnb , this.table1.currentDataST , this.table1.currentPage);
-    		this.$set(this.purpleLineChart.chartData.datasets[0], 'data', fetchdata);
-		//this.$refs.lineChartInstance.refresh();
-		// Redraw the chart by forcing a re-render
-    		this.isChartRendered = false;
-    		this.$nextTick(() => {
-      			this.isChartRendered = true;
-    		});
-		console.log(this.purpleLineChart.chartData.datasets[0].data);
-		console.log(fetchdata);
+		const fdata = await this.getChartData(this.table1.currentGnb , this.table1.currentDataST , this.table1.currentPage);
+		const RTC = await this.getChartData(this.table1.currentGnb , this.table1.currentDataST , this.table1.currentPage);
+		this.blackChart.datasets[0].data = fdata.map((item) => item.Total_Delay);
+		this.AirDLChart.datasets[0].data = fdata.map((item) => item.DRB_AirDL);
+		this.AirULChart.datasets[0].data = fdata.map((item) => item.DRB_AirUL);
+		this.RlcDLChart.datasets[0].data = fdata.map((item) => item.DRB_RlcDL);
+		this.RlcULChart.datasets[0].data = fdata.map((item) => item.DRB_RlcUL);
+		this.HandoverChart.datasets[0].data = fdata.map((item) => item.Handover);
+		this.blackChart.labels = RTC.map((item) => item.Date);
+		this.AirDLChart.labels = RTC.map((item) => item.Date);
+		this.AirULChart.labels = RTC.map((item) => item.Date);
+		this.RlcDLChart.labels = RTC.map((item) => item.Date);
+		this.RlcULChart.labels = RTC.map((item) => item.Date);
+		this.HandoverChart.labels = RTC.map((item) => item.Date);
+		//console.log(this.fdata);
+		//console.log(this.blackChart.datasets[0].data);
+		//console.log(this.blackChart.datasets[0].labels);
 	},
-	updateChartData(seriesData) {
-    		// Update the chart's dataset with the provided seriesData
-    		this.$set(this.purpleLineChart.chartData.datasets[0], 'data', seriesData);
-  	},
 	prevPage() {
 		if (this.table1.currentPage > 1) {
 			console.log(this.table1.currentPage);
@@ -312,7 +328,7 @@ computed: {
 async mounted() {
 	console.log("mounted");
 	this.loadDataForCurrentPage();
-	//this.table1.data = await this.getTableData();
+	this.loadDate();
 },
 };
 const table1Columns = ["Date","DRB_AirDL","DRB_AirUL","DRB_RlcDL","DRB_RlcUL","Handover","Total_Delay"];
