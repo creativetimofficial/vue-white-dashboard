@@ -152,7 +152,7 @@ export default {
      purpleLineChart: {
        extraOptions: chartConfigs.purpleChartOptions,
        chartData: {
-         labels: ["JUL", "AUG", "SEP", "OCT", "NOV"],
+         labels: [],
          datasets: [
            {
              label: "My First dataset",
@@ -168,7 +168,7 @@ export default {
              pointHoverRadius: 4,
              pointHoverBorderWidth: 15,
              pointRadius: 4,
-             data: [90, 27, 60, 12, 80],
+             data: [],
            },
          ],
        },
@@ -288,6 +288,21 @@ computed: {
 async mounted() {
 	this.loadDataForCurrentPage();
 	//this.table1.data = await this.getTableData();
+	try {
+    		const response = await axios.get("http://192.168.127.76:8888/ttd/1/1");
+		console.log(Object.values(response.data[this.table1.currentGnb]));
+		console.log(typeof Object.values(response.data[this.table1.currentGnb]));
+    		//return Object.values(response.data[this.table1.currentGnb]);
+		const labels = datafortable.map(item => item.Date);
+		console.log(labels);
+		const DRB_AirDL = datafortable.map(item => item.DRB_AirDL);
+		
+		this.purpleLineChart.chartData.labels = labels;
+		this.purpleLineChart.chartData.datasets.data = DRB_AirDL;
+
+	}catch(error) {
+    		console.log(error);
+  	}
 
 
 	console.log("mounted");
