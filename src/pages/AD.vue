@@ -70,6 +70,7 @@
             </h3>
           </template>
           <line-chart
+	    ref="lineChartInstance"
             class="chart-area"
             chart-id="purple-line-chart"
             :chart-data="purpleLineChart.chartData"
@@ -152,7 +153,7 @@ export default {
      purpleLineChart: {
        extraOptions: chartConfigs.purpleChartOptions,
        chartData: {
-         labels: [],
+         labels: ["USA", "GER", "AUS", "UK", "RO", "BR"],
          datasets: [
            {
              label: "My First dataset",
@@ -168,7 +169,7 @@ export default {
              pointHoverRadius: 4,
              pointHoverBorderWidth: 15,
              pointRadius: 4,
-             data: [],
+             data: [0.11,20,0.30,0.40,0.50,0.60],
            },
          ],
        },
@@ -198,7 +199,7 @@ export default {
              pointHoverRadius: 4,
              pointHoverBorderWidth: 15,
              pointRadius: 4,
-             data: [80, 100, 70, 80, 120, 80],
+             data: [0.11, 100, 70, 80, 120, 700],
            },
          ],
        },
@@ -220,10 +221,33 @@ methods : {
 			}catch(error) {
     				console.log(error);
   			}
-		},
+	},
+	async getChartData(gnbNumber , tableInfo , pageNumber) {
+		try {
+    		const response = await axios.get(`http://192.168.127.76:8888/${tableInfo}/${gnbNumber}/${pageNumber}`);
+				console.log(typeof Object.values(response.data[this.table1.currentGnb]));
+    				return (Object.values(response.data[this.table1.currentGnb])).map((item) => item.Handover);
+			}catch(error) {
+    				console.log(error);
+  			}
+	},
 	async loadDataForCurrentPage() {
 		this.table1.data = await this.getTableData(this.table1.currentGnb , this.table1.currentDataST , this.table1.currentPage);
+		const fetchdata = await this.getChartData(this.table1.currentGnb , this.table1.currentDataST , this.table1.currentPage);
+    		this.$set(this.purpleLineChart.chartData.datasets[0], 'data', fetchdata);
+		//this.$refs.lineChartInstance.refresh();
+		// Redraw the chart by forcing a re-render
+    		this.isChartRendered = false;
+    		this.$nextTick(() => {
+      			this.isChartRendered = true;
+    		});
+		console.log(this.purpleLineChart.chartData.datasets[0].data);
+		console.log(fetchdata);
 	},
+	updateChartData(seriesData) {
+    		// Update the chart's dataset with the provided seriesData
+    		this.$set(this.purpleLineChart.chartData.datasets[0], 'data', seriesData);
+  	},
 	prevPage() {
 		if (this.table1.currentPage > 1) {
 			console.log(this.table1.currentPage);
@@ -286,27 +310,9 @@ computed: {
 	},
 },
 async mounted() {
+	console.log("mounted");
 	this.loadDataForCurrentPage();
 	//this.table1.data = await this.getTableData();
-	try {
-    		const response = await axios.get("http://192.168.127.76:8888/ttd/1/1");
-		console.log(Object.values(response.data[this.table1.currentGnb]));
-		console.log(typeof Object.values(response.data[this.table1.currentGnb]));
-    		//return Object.values(response.data[this.table1.currentGnb]);
-		const labels = datafortable.map(item => item.Date);
-		console.log(labels);
-		const DRB_AirDL = datafortable.map(item => item.DRB_AirDL);
-		
-		this.purpleLineChart.chartData.labels = labels;
-		this.purpleLineChart.chartData.datasets.data = DRB_AirDL;
-
-	}catch(error) {
-    		console.log(error);
-  	}
-
-
-	console.log("mounted");
-	console.log(this.table1.data);
 },
 };
 const table1Columns = ["Date","DRB_AirDL","DRB_AirUL","DRB_RlcDL","DRB_RlcUL","Handover","Total_Delay"];
