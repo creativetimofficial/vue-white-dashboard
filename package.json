@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "cross-env CI=false vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -32,6 +32,7 @@
     "prettier": "2.8.1",
     "sass": "1.56.2",
     "sass-loader": "10.2.0",
-    "vue-template-compiler": "2.7.14"
+    "vue-template-compiler": "2.7.14",
+    "cross-env": "^7.0.3"
   }
 }
