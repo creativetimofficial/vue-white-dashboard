@@ -10,7 +10,7 @@
   "dependencies": {
     "chart.js": "2.9.4",
     "core-js": "2.6.5",
-    "vue": "2.7.14",
+    "vue": "3.0.0",
     "vue-chartjs": "3.4.2",
     "vue-click-outside": "1.1.0",
     "vue-clickaway": "^2.2.2",
